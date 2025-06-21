@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @media(max-width:600px) {
+
+
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: rgb(199, 223, 232);
+            height: 68px;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 2%;
+            margin-left: 12%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .contact1{
+            margin: 2% 0%;
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169));
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .contact1 h4{
+            padding-top:10px ;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+        }
+        .contact1 h2{
+            color: rgb(32, 17, 17);
+           padding-top: 90px;
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .contact1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 40%;
+            margin: 5% 30%;
+            background:linear-gradient(rgb(5, 56, 56),rgb(115, 165, 165));
+            border-radius: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .contact1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+
+        .motto1 {
+           background:  linear-gradient(rgb(187, 150, 150),
+           rgb(54, 148, 160));
+            background-size: cover;
+            background-position: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 1% 1%;
+            margin-bottom: -120px;
+           
+        } 
+        .motto1 p,h2{
+            font-size: 16px;
+            color: rgb(15, 2, 2);
+            font-weight: 600;
+        }
+        .motto1 h2{
+            font-weight: bold;
+            margin: 2% 30%;
+            color:rgb(12, 2, 2) ;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+        .motto1 span {
+            margin: 2% 38%;
+        }
+        .motto1 span{
+            color: rgb(138, 243, 243);
+            font-size: 40px;
+            font-weight: bolder;
+
+        }
+        .service1{
+           
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/contact.jpeg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+           background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .service1 h4{
+            padding-top: 15px;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(17, 2, 2);
+            font-weight: bolder;
+        
+        }
+
+        .service1 h2{
+            padding-top:100px ;
+            color: rgb(10, 3, 3);
+           
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        footer{
+            color: black;
+            background-color: rgb(199, 223, 232);
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+          
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+
+        .contact1 img{
+            margin: 2% 20%;
+            width: 60%;
+            border-radius: 5%;
+        }
+
+        .form1{
+         margin: 0;
+         padding: 0;
+    
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+            height: 400px;
+            background-position: center;
+}
+form{
+    padding-top: 10%;
+    background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+    margin: 30% 20%;
+}
+form input {
+    outline: none;
+    border: none;
+    padding: 5%;
+    width: 80%;
+    margin: 3% 0%;font-size: 13px;
+    font-weight: bold;
+   
+    
+}
+textarea{
+    padding: 3%;
+    width: 94%;
+    margin: 3% 0%;
+    border: none;
+    outline: none;
+}
+.submit{
+            border: none;
+            outline: none;
+            padding: 12px;
+            width: 50%;
+            margin: 5% 20%;
+            background: linear-gradient(rgb(11, 11, 77),
+            rgb(101, 101, 150));;
+            border-radius: 15px; 
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+           
+}
+     
+.my-icon{
+    border: none;
+    outline: none;
+    padding: 5%;
+    margin-right: -5px;
+}
+.my-icon i{
+    font-size: 13px;
+    color: blue;
+    font-weight: bold;
+}
+        }
+            
+        
+@media (min-width:601px) {
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           border-radius: 2%;
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 5%;
+            color: black;
+            width: 50%;
+        }
+        header .logo h4{
+            font-size: 25px;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav{
+            width: 70%;
+            margin: 0 20%;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+           margin: 0% 1%;
+        }
+        
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+
+        .service1{
+           
+           background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("photos/contact.jpeg");
+           background-size: cover;
+           background-position: center;
+           height: 400px;
+          background-position: center;
+       }
+       /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+       */
+       .service1 h4{
+           padding-top: 15px;
+           padding-left: 50px;
+           font-size: 22px;
+           color: rgb(17, 2, 2);
+           font-weight: bolder;
+       
+       }
+
+       .service1 h2{
+           padding-top:100px ;
+           color: rgb(10, 3, 3);
+          
+           padding-left: 50px;
+           font-size: 35px;
+       }
+
+       .motto1 {
+           background:  linear-gradient(rgb(187, 150, 150),
+           rgb(54, 148, 160));
+            background-size: cover;
+            background-position: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 1% 1%;
+            margin-bottom: -370px;
+           
+        } 
+        .motto1 p,h2{
+            font-size: 16px;
+            color: rgb(15, 2, 2);
+            font-weight: 600;
+        }
+        .motto1 h2{
+            font-weight: bold;
+            margin: 2% 30%;
+            color:rgb(12, 2, 2) ;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+        .motto1 span {
+            margin: 2% 38%;
+        }
+        .motto1 span{
+            color: rgb(138, 243, 243);
+            font-size: 40px;
+            font-weight: bolder;
+
+        }
+
+       .contact1{
+            margin: 2% 0%;
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169));
+            background-size: cover;
+            background-position: center;
+           
+            height: auto;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .contact1 img{
+            width: 50%;
+            margin: 5% 25%;
+        }
+
+        .contact1 h4{
+            padding-top:10px ;
+           
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+            text-align: center;
+        }
+        
+        .contact1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            align-items: center;
+            width: 20%;
+            margin: 5% 35%;
+            background:linear-gradient(rgb(5, 56, 56),
+            rgb(115, 165, 165));
+            border-radius: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .contact1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+
+        .form1{
+         margin: 0;
+         padding: 0;
+    
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+            height: auto;
+            background-position: center;
+}
+form{
+    padding-top: 10%;
+    background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+    margin: 30% 20%;
+}
+form input {
+    outline: none;
+    border: none;
+    padding: 5%;
+    width: 80%;
+    margin: 3% 0%;font-size: 13px;
+    font-weight: bold;
+   
+    
+}
+textarea{
+    padding: 3%;
+    width: 94%;
+    margin: 3% 0%;
+    border: none;
+    outline: none;
+}
+.submit{
+            border: none;
+            outline: none;
+            padding: 12px;
+            width: 50%;
+            margin: 5% 20%;
+            background: linear-gradient(rgb(11, 11, 77),rgb(101, 101, 150));;
+            border-radius: 15px; 
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+           
+}
+     
+.my-icon{
+    border: none;
+    outline: none;
+    padding: 5%;
+    margin-right: -5px;
+}
+.my-icon i{
+    font-size: 14px;
+    color: blue;
+    font-weight: bold;
+}
+
+       footer{
+           color: black;
+           background-color: rgb(199, 223, 232);
+           height: 65px;
+           align-items: center;
+           justify-content: center;
+           display: flex;
+           margin-top: -400px;
+       }
+       footer p{
+           padding-top: 10px;
+           font-size: 13px;
+           font-weight: bold;
+       }
+}
+
+
+        
+
+  
+
+
+    
+        
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="photos/logo3.png" alt="">
+            <h4>Jxs Global</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        
+        </nav>
+    </header>
+
+    <section class="service1">
+        <h2>We Are Brand Builders</h2>
+        <h4>Experts in innovative thinking and creative ideas</h4>
+    </section>
+    <section class="contact1">
+        <img src="photos/contact 1.jpeg" alt="">
+        <h4>Speak with our experts today, lets talk about your goals.</h4>
+        <button>
+            <a href="tel:+256 783380569">
+                 <i class='bx bx-phone' ></i> CALL US  </i></a>
+        </button>
+    </section>
+    
+        <div class="motto1">
+            <span><i class='bx bx-like' ></i></span>
+            <h2>Get in Touch</h2>
+                <p>
+                   Reach out to us today to discuss how we can help elevate 
+                   your brand.Fill in your details below and our team will contact you shortly.
+                </p>
+             </div>
+    
+    <section class="form1">
+        <form action="https://formsubmit.co/aredoivan9@gmail.com" method="post">
+<button class="my-icon"> <i class='bx bx-male' ></i></button>
+<input type="text" id="name" name="name" required placeholder="Your Name"><br>
+
+<button class="my-icon"><i class='bx bx-phone' ></i></button>
+<input type="text" required name="contact" id="contact" placeholder=" 
+ Phone"> <br>
+<textarea name="message" id="message" rows="5" placeholder=""> 
+    message
+</textarea><br>
+<button type="submit" class="submit" onclick="alertOn()">Submit</button>
+
+
+        </form>
+    </section>
+    <footer>
+        <p>&copy; Jxs Global 2025 .All rights reserved</p>
+    </footer>
+    <script>
+        /*
+        let submit=document.querySelector('.submit');
+        function alertOn(){
+            alert('submission sucessiful !');
+        }
+            */
+    </script>
+</body>
+</html>

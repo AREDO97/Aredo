@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us page</title>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+    <link href='https://cdn.boxicons.com/fonts/basic/boxicons.min.css' rel='stylesheet'>
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <style>
+        @media(max-width:600px) {
+            
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: rgb(199, 223, 232);
+            height: 68px;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo h4{
+            color:  rgb(32, 17, 17);
+            font-size: 20px;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 2%;
+            margin-left: 12%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .contact1{
+            background-image:linear-gradient(rgb(185, 169, 169), 
+            rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+
+        /*motto*/
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 5% 2%;
+            text-align: left;
+           
+        } 
+        .motto1 p,h2{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .motto1 h2{
+            margin: 2% 30%;
+            font-weight: bold;
+        }
+        .motto1 h2:hover{
+            text-decoration: line-through;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+        .contact1 h4{
+            padding-top:10px ;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+        }
+        .contact1 h2{
+            color: rgb(32, 17, 17);
+           padding-top: 90px;
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .contact1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 40%;
+            margin: 5% 25%;
+            background: linear-gradient(rgb(95, 59, 59),rgb(22, 9, 9));
+            border-radius: 15px;
+        }
+        .contact1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+        .jan{
+            
+            text-align: center;
+        }
+        .jan h2,p{
+            font-weight: bold;
+        }
+       
+
+        footer{
+            color: black;
+            background-color: rgb(199, 223, 232);
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            font-size: 13px;
+           
+        }
+        .container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 8% 5%;
+            text-align: left;
+            width:90% ;
+        }
+        .container img{
+            width: 60%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10%;
+            margin: 3% 1%;
+        }
+        .about1{
+            text-align: center;
+            
+        }
+
+.about2{
+    background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+           margin-bottom: 5%;
+            height: 450px;
+}
+
+       .about2 img{
+        width: 80%;
+        object-fit: cover;
+        margin: 2% 10%;
+        height: 350px;
+        object-position: top;
+        border-radius: 5%;
+        margin: 10% 10%;
+       }
+       
+    }
+    @media (min-width:601px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           border-radius: 2%;
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 5%;
+            color: black;
+            width: 50%;
+        }
+        header .logo h4{
+            font-size: 25px;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav{
+            width: 70%;
+            margin: 0 20%;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+           margin: 0% 1%;
+        }
+        
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 2% 20%;
+            text-align: left;
+            width: 60%;
+            
+           
+        } 
+
+        footer{
+            color: black;
+            background: white;
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        .motto1 p,h2{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .motto1 h2{
+            margin: 2% 30%;
+            font-weight: bold;
+        }
+        .motto1 h2:hover{
+            text-decoration: line-through;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+        .contact1{
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+           width: 80%;
+           margin: 2% 10%;
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .contact1 h4{
+            padding-top:10px ;
+            padding-left: 200px;
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+        }
+        .contact1 h2{
+            color: rgb(32, 17, 17);
+           padding-top: 90px;
+            padding-left: 200px;
+            font-size: 35px;
+        }
+        .contact1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 15%;
+            margin: 5% 30%;
+            background: rgb(31, 13, 13);
+            border-radius: 15px;
+        }
+        .contact1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+        .service1{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.5),
+             rgba(0, 0, 0, 0.5)), url("photos/download (4).jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .container img{
+            width: 65%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: 2%;
+            margin: 3% 15%;
+        }
+        .about1{
+            text-align: center;
+            
+        }
+.about2{
+    margin: 3% 0;
+    background: rgb(185, 169, 169);
+    align-items: center;
+    text-align: center;
+    height: 500px;
+    width: 80%;
+    margin: 10% 10%;
+}
+
+
+       .about2 img{
+        width: 60%;
+        object-fit: cover;
+        margin: 2% 10%;
+        height: 400px;
+        object-position: top;
+        border-radius: 5%;
+       } 
+    }
+    .hidden{
+        display: none;
+        
+    }
+   
+    .hide{
+        display: none;
+       
+    }
+    
+    .hide i{
+        font-weight: 640;
+    }
+    .see{
+        font-weight: 640;
+    }
+    .see i{
+        font-weight: 640;  
+        color: blue; 
+    }
+        .copy{
+            font-size: 20px;
+            color: rgb(32, 17, 17);
+            font-weight: bolder;
+        }
+        button:hover{
+            background: transparent;
+            border: 2px solid brown;
+        }
+        button a:hover{
+            color: brown;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .hiding{
+            display: none;
+        }
+        .seeing{
+            font-weight: 640;
+        }
+        .hide i{
+            font-weight: 640;
+            color: blue;
+        }
+        .seeing i{
+            font-weight: 640;
+            color: blue;
+        }
+        
+        .motto1 .icon {
+            margin: 2% 45%;
+            color: blue;
+            font-weight: bolder;
+            font-size: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="photos/logo3.png" alt="">
+            <h4>Jxs Global</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          <!--<img src="photos/city.jpeg" alt="">
+            -->  
+        </nav>
+    </header>
+    <section class="contact1">
+        <h2>Expert Marketing Partners</h2>
+        <h4>Your Vision,Our Expertise,Exceptional Results</h4>
+        <button>
+            <a href="mailto:aredoivan9@gmail.com">Hire Me</a>
+        </button>
+    </section>
+   <section class="about1">
+    <section class="about1">
+        
+     <div class="motto1">
+        <span class="icon">  <i class='bx bx-layer' ></i></span>
+        <h2>Global Vision</h2>
+            <p>
+               We are more than just a marketing agency,we are your global growth
+               partners. With a bold vision to bridge brands across borders, we 
+               specialise in crafting powerful marketing strategies
+                that connect ,inspire 
+               and convert. <span class="see" onclick="seeMore()">See more
+                 <i class='bx bx-vertical-bottom' >
+
+               </i></span> <span class="hidden">
+                Founded on the principles of integrity
+                ,innovation and impact, our mission is to help businesses thrive in today's 
+                competitive and fast-evolving market place.As an international marketing
+                agent ,we understand the complexities and opportunities
+                 that come with operating in a global economy
+                .
+               </span>  <span class="hide" onclick="hideSome()">Hide
+                 <i class='bx bx-vertical-top'></i></span>
+            </p>
+    
+         </div>
+    </section>
+
+    <div class="motto1">
+        <span class="icon"> <i class='bx bxl-squarespace' ></i></span>
+        <h2>Our Dedicated Team</h2>
+            <p>
+             Our team of passionate strategists,
+             creatives and digital experts 
+             works hand in hand with clients 
+             to unlock market potential,
+             create brand visibility and drive 
+             customer engagement on a global scale. 
+             <span class="seeing" onclick="viewMore()">See more <i class='bx bx-vertical-bottom'></i>
+
+             </span><span class="hiding">
+                Our marketing team is a heartbeat of our global 
+                sucess.Composed of talented strategists,
+                brand experts,digital marketers,and
+                 creative thinkers from diverse backgrounds,
+                our team brings a unique blend of
+                internationalexperience and local insight. 
+            </span>  <span class="hidee" onclick="hideSome()">Hide
+                <i class='bx bx-vertical-top'></i></span>
+             </span>
+               
+              
+            </p>
+    
+         </div>
+    </section>
+
+    <section class="about2">
+        
+        <img src="photos/team3.jpeg" alt="">
+        
+       </section>
+       <div class="motto1">
+        <span class="icon"> <i class='bx bx-male' ></i></span>
+        <h2>Our Journey</h2>
+        <p>From humble beginnings to global presence
+            ,becoming a trusted name in international marketing
+            our journey has been driven by passion, inovation and results.
+        </p>
+       </div>
+    
+
+    <div class="container">
+        <div class="left">
+            <img src="photos/jan1.jpeg" alt="">
+        </div>
+        <div class="right">
+            <img src="photos/ocaa4.jpg" alt="">
+        </div>
+    </div>
+   </section>
+  
+    <footer>
+        <p>&copy; Jxs Global 2025 .All rights reserved</p>
+    </footer>
+    <script>
+        let see=document.querySelector('.see');
+        let hide=document.querySelector('.hide');
+        let hidden=document.querySelector('.hidden');
+        function seeMore(){
+            if (hidden.style.display==="none"){
+                hidden.style.display="inline-block";
+                see.style.display="none";
+                hide.style.display="inline-block";
+            }
+           else{
+            hidden.style.display="none"
+            see.style.display="inline-block";
+           } 
+
+         
+
+        }
+
+        function hideSome(){
+            if (hidden.style.display==="inline-block"){
+                hidden.style.display="none";
+                see.style.display="inline-block";
+                hide.style.display="none";
+            }
+           else{
+            hidden.style.display="inline-block"
+            see.style.display="none";
+           } 
+           }
+
+
+          
+
+           //view more
+         let seeing=document.querySelector('.seeing');
+        let hiding=document.querySelector('.hiding');
+        
+        function viewMore(){
+            if (hiding.style.display==="none"){
+                hiding.style.display="inline-block";
+                seeing.style.display="none";
+                
+            }
+           else{
+            hiding.style.display="none"
+            seeing.style.display="inline-block";
+           } 
+
+         
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog page</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <style>
+        @media(max-width:600px) {
+            
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(185, 169, 169);
+        }
+        header{
+            background-color: rgb(199, 223, 232);
+            height: 68px;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 2%;
+            margin-left: 12%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .service1{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/blog3.jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .service1 h4{
+            padding-top: 15px;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(8, 2, 2);
+            font-weight: bolder;
+        }
+        .service1 h2{
+            padding-top:100px ;
+            color: rgb(10, 3, 3);
+           
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .blog2 h2,p{
+            margin: 2% 15%;
+        }
+        .blog2 .main img{
+            width: 50%;
+            object-fit: cover;
+            height: 100px;
+            margin: 2% 10%;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .left,.right{
+            text-align: left;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .blog3 h2,p{
+            margin: 2% 15%;
+        }
+        .blog4{
+           
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/mark2.jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 500px;
+            background-position: center;
+        }
+        .blog4 h4,p{
+            margin: 2% 15%;
+        }
+        .blog4 h2{
+            padding-top: 150px;
+            font-size: 35px;
+        }
+        .blog3  img{
+            width: 80%;
+            object-fit: cover;
+            height: 300px;
+            margin: 2% 10%;
+            border-radius: 10%;
+        }
+        .blog4 h2,p{
+            margin: 2% 15%;
+        }
+     
+        footer{
+            color: black;
+            background-color: rgb(199, 223, 232);
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: 800;
+        }
+        .hide{
+            display: none;
+            color: rgba(3, 1, 0, 0.678);
+           
+        }
+        .thoughts{
+            display: flex;
+            margin: 5% 0%;
+            background: rgb(199, 223, 232);
+            height: 300px;
+        }
+        .text2 img{
+                border-radius: 10%;  
+                margin: 4% 0%;
+                width: 200px;
+                height: 250px;
+                object-fit: cover;
+                
+          }
+          .text1 h1{
+            font-size: 45px;
+            margin: 0 4%;
+          }
+          .text1 p{
+            font-size: 20px;
+            font-weight: 400;
+          }
+          .text1 h1 span i{
+            font-size: 45px;
+            color: rgb(0, 3, 3);
+          }
+        }
+        
+    
+    @media (min-width:601px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: white;
+            height: 80px;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 1%;
+            margin-left: 20%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .service1{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/blog3.jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .service1 h4{
+            padding-top: 15px;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(17, 2, 2);
+            font-weight: bolder;
+        }
+        .service1 h2{
+            padding-top:100px ;
+            color: rgb(107, 6, 6);
+           
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .main{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+        .left,.right{
+            text-align: left;
+            flex-direction: column;
+            flex-wrap: wrap;
+        }
+        .left img,.right img{
+            width: 60%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10%;
+            margin: 3% 10%;
+        }
+        .blog2 h2,p{
+            margin: 2% 15%;
+        }
+        .blog3 h2,p{
+            margin: 2% 15%;
+        }
+        .blog4{
+           overflow: hidden;
+           background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+            rgba(0, 0, 0, 0.1)), url("photos/mark2.jpeg");
+           background-size: cover;
+           background-position: center;
+          
+           height: 600px;
+           background-position: center;
+       }
+
+       .blog4 h2{
+            padding-top: 100px;
+            font-size: 35px;
+        }
+        .blog4 h4,p{
+            margin: 2% 15%;
+        }
+        .blog3  img{
+            width: 80%;
+            object-fit: cover;
+            height: 500px;
+            margin: 2% 10%;
+            border-radius: 8%;
+        }
+        .blog4 h2,p{
+            margin: 2% 15%;
+        }
+     
+        footer{
+            color: black;
+            background: white;
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .hide{
+            display: none;
+           
+        } 
+        
+        .thoughts{
+            display: flex;
+            margin: 5% 10%;
+            background: rgb(199, 223, 232);
+            height: auto;
+            width: 80%;
+        }
+        .text2 img{
+                border-radius: 10%;  
+                margin: 4% 0%;
+                width: 400px;
+                height: 350px;
+                object-fit: cover;
+                
+          }
+          .text1 h1{
+            font-size: 45px;
+            margin: 0 4%;
+          }
+          .text1 p{
+            font-size: 20px;
+            font-weight: 400;
+          }
+          .text1 h1 span i{
+            font-size: 45px;
+            color: rgb(0, 3, 3);
+          }
+    }
+    .Hide,.hidee{
+        display: none;
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="photos/logo3.png" alt="">
+            <h4>Jxs Global</h4>
+        </div>
+        <nav>
+       <!-- <img src="photos/mark2.jpeg" alt="">  
+            --> 
+             
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          <!--<img src="photos/city.jpeg" alt="">
+            -->  
+        </nav>
+    </header>
+    <section class="service1">
+        <h2>Insights and Inspiration</h2>
+        <h4>Explore the latest trends and ideas in business and marketing</h4>
+    </section>
+    <section class="thoughts">
+        <div class="text1">
+            <h1>Ideas Into Action
+                <span> <i class='bx bx-wink-tongue' ></i></span>
+            </h1>
+            <p>Dive into expert perspectives and proven tactics
+              
+            </p>
+        </div>
+        <div class="text2">
+            <img src="photos/myblog.jpeg" alt="">
+        </div>
+    </section>
+    <section class="blog2">
+        
+        <h2>Recent Trends in Marketing</h2>
+        <p>Stay ahead of the curve with the latest insights</p>
+        <div class="main">
+            <div class="left">
+<img src="photos/myblog3.jpeg" alt="">
+<p>The rise of Digital Marketing in 2025</p>
+            </div>
+            <div class="right">
+<img src="photos/myblog4.jpeg" alt="">
+<p>Leveraging Social Media for Business Growth.</p>
+            </div>
+        </div>
+    </section>
+    <section class="blog3">
+        <h2>Expert Insights on Business Strategies</h2>
+        <p>Gain knowledge from industry leaders
+             and enhance your strategies</p>
+        <img src="photos/growth.jpg" alt="">
+    </section>
+    <section class="blog4">
+<h2>Frequently Asked Questions </h2>
+<span>
+    <h4>What services does Jxs Global provide ?
+         <span class="plus" onclick="showMore()">+</span></h4>
+    <p class="hide">Jxs Global specialises in international 
+        business and marketing strategies ,
+        offering Services such as 
+        market reserach ,brand development
+        and digital marketing.
+     </p>
+</span>
+
+<span>
+    <h4>Why should a business hire a marketing agent?
+         <span class="Plus" onclick="viewMore()">+</span></h4>
+    <p class="Hide">We provide local insights,help
+         overcome language and cultural barriers,
+         identify target marketand reduce the risk and cost
+         of entering a new market.
+
+     </p>
+</span>
+
+<span>
+    <h4>Do international marketing agents work with small businesses?
+         <span class="plusi" onclick="clickMore()">+</span></h4>
+    <p class="hidee">Yes,many agents specialise in 
+        helping small and medium enterprises
+        grow internationally.
+
+
+     </p>
+</span>
+   </section>
+    <footer>
+        <p>&copy; Jxs Global 2025 .All rights reserved</p>
+    </footer>
+    <script>
+let hide=document.querySelector('.hide');
+let plus=document.querySelector('.plus');
+function showMore(){
+    if (hide.style.display==="none"){
+        hide.style.display="inline-block";
+        plus.innerHTML="-";
+    }
+    else{
+         hide.style.display="none";
+        plus.innerHTML="+";
+    }
+}
+
+let Hide=document.querySelector('.Hide');
+let Plus=document.querySelector('.Plus');
+function viewMore(){
+    if (Hide.style.display==="none"){
+        Hide.style.display="inline-block";
+        Plus.innerHTML="-";
+    }
+    else{
+         Hide.style.display="none";
+        Plus.innerHTML="+";
+    }
+}
+
+
+let hidee=document.querySelector('.hidee');
+let plusi=document.querySelector('.plusi');
+function clickMore(){
+    if (hidee.style.display==="none"){
+        hidee.style.display="inline-block";
+        plusi.innerHTML="-";
+    }
+    else{
+         hidee.style.display="none";
+        plusi.innerHTML="+";
+    }
+}
+
+    </script>
+</body>
+</html>

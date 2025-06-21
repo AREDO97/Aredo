@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services Page</title>
+    <style>
+        @media(max-width:600px) {
+            
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: rgb(185, 169, 169);
+        }
+        header{
+            background-color: rgb(199, 223, 232);
+            height: 68px;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 2%;
+            margin-left: 12%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .service1{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/services 2.jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .service1 h4{
+            padding-top: 15px;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(17, 2, 2);
+            font-weight: bolder;
+        
+        }
+       
+        .service1 h2{
+            padding-top:100px ;
+            color: rgb(10, 3, 3);
+           
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .service2{
+          background: white;
+            height: 400px;
+           
+        }
+        .services2 img{
+          object-fit: cover;
+          width: 70%;
+          height: 300px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 2% 15%;
+        }
+        .services2 h2{
+           margin: 2% 25%;
+           font-size: 18px;
+        }
+        .services2 p{
+            margin: 0% 18%;
+            font-size: 16px;
+        }
+
+        .service3{
+          background: white;
+            height: auto;
+           
+        }
+        .service3 img{
+          object-fit: cover;
+          width: 70%;
+          height: 300px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 2% 15%;
+        }
+        .service3 h2{
+           margin: 2% 25%;
+           font-size: 18px;
+        }
+        .service3 p{
+            margin: 0% 18%;
+            font-size: 16px;
+        }  
+
+        .service4{
+          background: white;
+            height: 400px;
+           
+        }
+        .service4 img{
+          object-fit: cover;
+          width: 30%;
+          height: 100px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 2% 5%;
+        }
+        .service4 h2{
+           margin: 2% 25%;
+           font-size: 18px;
+        }
+        .service4 p{
+            margin: 0% 18%;
+            font-size: 16px;
+        }  
+        .service4 .image-container{
+            display: flex;
+            margin: 2% 15%;
+        }
+        .service4 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 50%;
+            margin: 5% 20%;
+            background: rgb(31, 13, 13);
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+        }
+        footer{
+            color: black;
+            background-color: rgb(199, 223, 232);
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .motto1 {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1), 
+            rgba(0, 0, 0, 0.1)), url("photos/flower.jpeg");
+            background-size: cover;
+            background-position: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            height: 400px;
+          
+           
+        } 
+       
+        .motto1 h2{
+            font-size: 20px;
+            margin: 5% 30%;
+            color:rgb(12, 2, 2) ;
+            border: 2px solid rgb(12, 2, 2);
+            border-radius: 10%;
+           
+        }
+        .motto1 p{
+            margin: 5% 10%;
+            color:rgb(12, 2, 2) ;
+            line-height: 30px;
+            font-weight: 600;
+           
+        }
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+         /*button hover */
+         button:hover{
+            background: transparent;
+            border: 2px solid   rgb(32, 17, 17);
+           color: black;
+           font-weight: bold;
+            cursor: pointer;
+
+
+        }
+
+      
+        .brand img{
+          object-fit: cover;
+          width: 30%;
+          height: 100px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 6% 8%;
+         transition:transform 0.3s ease;
+        }
+
+        
+        .brand{
+          display: none;
+          background-color: rgb(199, 223, 232);
+          height: 300px;
+          margin: 2% 10%;
+         
+        }
+
+        .brand img:hover{
+     transform: scale(2.0);
+        }
+    }
+    @media (min-width:601px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           border-radius: 2%;
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 5%;
+            color: black;
+            width: 50%;
+        }
+        header .logo h4{
+            font-size: 25px;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav{
+            width: 70%;
+            margin: 0 20%;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+           margin: 0% 1%;
+        }
+        
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+           
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+        .service1{
+            background-image:linear-gradient(rgba(0, 0, 0, 0.1),
+             rgba(0, 0, 0, 0.1)), url("photos/services 2.jpeg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .service1 h4{
+            padding-top: 15px;
+            padding-left: 200px;
+            font-size: 22px;
+            color: rgb(7, 1, 1);
+            font-weight: bolder;
+        }
+        .service1 h2{
+            padding-top:100px ;
+            color: rgb(15, 2, 2);
+           
+            padding-left: 200px;
+            font-size: 35px;
+        }
+        .service2{
+          background: white;
+            height: 400px;
+           
+        }
+        .services2 img{
+          object-fit: cover;
+          width: 60%;
+          height: 400px;
+          object-position: center;
+          border-radius: 4%;
+          margin: 2% 10%;
+        }
+        .services2 h2{
+           margin: 5% 25%;
+           font-size: 25px;
+        }
+        .services2 p{
+            margin: 0% 18%;
+            font-size: 20px;
+        }
+
+        .service3{
+          background: white;
+            height: auto;
+           
+        }
+        .service3 img{
+          object-fit: cover;
+          width: 60%;
+          height: 400px;
+          object-position: top;
+          border-radius: 4%;
+          margin: 2% 10%;
+        }
+        .service3 h2{
+           margin: 5% 25%;
+           font-size: 25px;
+        }
+        .service3 p{
+            margin: 0% 18%;
+            font-size: 20px;
+        }  
+
+        .service4{
+          background: white;
+            height:auto;
+            margin: 10% 0;
+           
+        }
+        .service4 img{
+          object-fit: cover;
+          width: 40%;
+          height: 300px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 2% 5%;
+        }
+        .service4 h2{
+           margin: 2% 25%;
+           font-size: 25px;
+        }
+        .service4 p{
+            margin: 0% 18%;
+            font-size: 20px;
+        }  
+        .service4 .image-container{
+            display: flex;
+            margin: 2% 15%;
+        }
+        .service4 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 20%;
+            margin: 5% 40%;
+            background: rgb(31, 13, 13);
+            border-radius: 15px;
+            font-size: 20px;
+            color: white;
+        }
+
+        .motto1 {
+            background-image:linear-gradient(rgba(0, 0, 0, 0.5),
+             rgba(0, 0, 0, 0.5)), url("photos/flower.jpeg");
+            background-size: cover;
+            background-position: center;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            width: 80%;
+            margin: 2% 10%;
+            height: 300px;
+          
+           
+        } 
+        .motto1 p{
+            font-size: 25px;
+            color: rgb(15, 2, 2);
+        }
+        .motto1 h2{
+            margin: 2% 30%;
+            color:rgb(12, 2, 2) ;
+            font-size: 30px;
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+
+        footer{
+            color: black;
+            background: white;
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 20px;
+            font-weight: 800;
+        }
+
+        .brand img{
+          object-fit: cover;
+          width: 30%;
+          height: 250px;
+          object-position: top;
+          border-radius: 10%;
+          margin: 5% 8%;
+        }
+
+        
+        .brand{
+          background-color: rgb(137, 201, 224);
+          display: none;
+        
+          height: auto;
+          margin: 2% 20%;
+           
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="photos/logo3.png" alt="">
+            <h4>Jxs Global</h4>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+          <!--<img src="photos/city.jpeg" alt="">
+            -->  
+        </nav>
+    </header>
+    <section class="service1">
+        <h2>Our Comprehensive Services</h2>
+        <h4>Tailored solutions to meet your business needs</h4>
+    </section>
+    <section class="services2">
+        <h2>Expert Consultation</h2>
+        <p>Guiding you through the complexities of the business landscape</p>
+        <img src="photos/ocaa3.jpg" alt="">
+    </section>
+<section class="service3">
+    <h2>Social media Marketing</h2>
+    <p>I manage and grow social media presence across 
+        all major platforms.From creating engaging
+    content to interacting with your audience, I help build strong 
+brand loyality online.</p>
+<img src="photos/fav2.jpg" alt="">
+</section>
+<section class="service4">
+    <h2>Branding & Identity</h2>
+    <p>We help you build a strong ,consistent brand that stands out.
+        This includes logo design, brand messaging,and visual Identity
+        guidelines that reflect your business personality and values.
+    </p>
+    <div class="image-container">
+        <img src="photos/logo3.png" alt="">
+        <img src="photos/logox.jpeg" alt="">
+    </div>
+    
+        <button class="butn" onclick="exploreMore()">Explore Brands</button>
+   
+</section>
+    <div class="brand">
+        <img src="photos/explore1 (4).png" alt="">
+        <img src="photos/explore1 (4).jpeg" alt="">
+        <img src="photos/explore1 (5).jpeg" alt="">
+        <img src="photos/explore1 (6).jpeg" alt="">
+    </div>
+
+<section class="service5">
+    <div class="motto1">
+        <h2>Market Research</h2>
+            <p>
+                We provide in-depth market research
+                 services that equip clients with
+                the insights to make informed decisions.
+                Our reserach methodologies 
+                include surveys,focus groupsand data analysis
+            </p>
+    
+         </div>
+</section>
+<footer>
+    <p>&copy; Jxs Global 2025 .All rights reserved</p>
+</footer>
+<script>
+    let brand=document.querySelector('.brand');
+    let buttonElement=document.querySelector('.butn')
+    let clicked=true;
+    function exploreMore(){
+        if(clicked){
+            brand.style.display="block";
+        }
+        else{
+            brand.style.display="none";
+        }
+    }
+</script>
+</body>
+</html>

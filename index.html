@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+
+    <style>
+       
+
+        @media(max-width:600px) {
+            
+        
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: rgb(199, 223, 232);
+            height: 68px;
+            border-radius: 2%;
+           
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 30%;
+            color: black;
+        }
+        header .logo h4{
+            font-size: 20px;
+            color:  rgb(32, 17, 17);
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+            margin-right: 3%;
+        }
+        nav{
+            margin-top: 2%;
+            margin-left: 12%;
+        }
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+        .home1{
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .home1 h4{
+            padding-top:100px ;
+            padding-left: 50px;
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+        }
+        .home1 h2{
+            color: rgb(32, 17, 17);
+           padding-top: 15px;
+            padding-left: 50px;
+            font-size: 35px;
+        }
+        .home1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 40%;
+            margin: 5% 25%;
+            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
+            border-radius: 15px;
+        }
+        .home1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            font-weight: bold;
+            
+        }
+        .home2{
+            background: rgb(185, 169, 169);
+            height: auto;
+        }
+        .home2 img{
+            width: 70%;
+            margin: 5% 15%;
+            object-fit: cover;
+            height: 300px;
+            margin-top: 12%;
+            object-position: top;
+            border-radius: 2%;
+        }
+        .home2 h2{
+            margin: 0 30%;
+        }
+        .home2 p{
+            margin: 0 20%;
+            font-size: 20px;
+        }
+
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 0 8%;
+           
+        } 
+        .motto1 p,h2{
+            font-size: 16px;
+            font-weight: 400;
+        }
+        
+        .motto1 h2{
+            margin: 2% 30%;
+            font-weight: bold;
+        }
+        .motto1 h2:hover{
+            text-decoration: line-through;
+        }
+        .motto1 span {
+            margin: 2% 38%;
+        }
+        .motto1 span{
+            color: blue;
+            font-size: 40px;
+            font-weight: bolder;
+
+        }
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+        .home2 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 40%;
+            margin: 5% 25%;
+            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
+            border-radius: 15px;
+        }
+        .home2 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            
+        }
+        .digital img{
+            width: 70%;
+            margin: 5% 15%;
+            object-fit: cover;
+            height: 300px;
+            margin-top: 12%; 
+        }
+        footer{
+            color: black;
+            background-color: rgb(199, 223, 232);
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        /*button hover */
+        button:hover{
+            background: transparent;
+            border: 2px solid   rgb(32, 17, 17);
+           
+            cursor: pointer;
+        }
+        button a:hover{
+            color: rgb(32, 17, 17);
+            font-weight: bold;
+        }
+        .copy{
+            font-size: 13px;
+            color: rgb(32, 17, 17);
+            font-weight: bolder;
+        }
+    }
+    @media (min-width:601px) {
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: system-ui, -apple-system, 
+            BlinkMacSystemFont, 
+            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
+            'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+        header{
+            background-color: white;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+           border-radius: 2%;
+        }
+        header .logo{
+            display: flex;
+            align-items: center;
+            margin: 0 5%;
+            color: black;
+            width: 50%;
+        }
+        header .logo h4{
+            font-size: 25px;
+        }
+        header .logo img{
+            width: 30px;
+            border-radius: 10px;
+        }
+        nav{
+            width: 70%;
+            margin: 0 20%;
+        }
+        nav ul li{
+            list-style: none;
+            display: inline-block;
+           margin: 0% 1%;
+        }
+        
+        nav ul li a{
+            color: black;
+            text-decoration: none;
+            font-size: 20px;
+        }
+        nav ul li::after{
+            content: "";
+            transition: 0.5s;
+            background:  rgb(32, 17, 17);
+            height: 2px;
+            width: 0%;
+            display: block;
+        }
+        nav ul li:hover:after{
+            width: 100%;
+        }
+
+        .home1{
+            background-image:linear-gradient(rgb(185, 169, 169),
+             rgb(185, 169, 169)), url("photos/market.jpg");
+            background-size: cover;
+            background-position: center;
+           
+            height: 400px;
+            background-position: center;
+        }
+        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+        */
+        .home1 h4{
+            padding-top:100px ;
+            padding-left: 280px;
+            font-size: 22px;
+            color: rgb(32, 17, 17);
+        }
+        .home1 h2{
+            color: rgb(32, 17, 17);
+           padding-top: 15px;
+            padding-left: 340px;
+            font-size: 35px;
+        }
+        .home1 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 18%;
+            margin: 2% 35%;
+            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
+            border-radius: 15px;
+        }
+        .home1 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            
+        }
+        .home2{
+            background: rgb(185, 169, 169);
+            height: auto;
+        }
+        .home2 img{
+            width: 70%;
+            margin: 5% 15%;
+            object-fit: cover;
+            height: 300px;
+            margin-top: 12%;
+        }
+        .home2 h2{
+            margin: 0 30%;
+        }
+        .home2 p{
+            margin: 0 20%;
+            font-size: 20px;
+        }
+
+        .motto1 {
+            background-color: rgb(199, 223, 232);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            margin: 0 15%;
+            height: 300px;
+           
+        } 
+        .motto1 p,h2{
+            font-size: 20px;
+        }
+        .motto1 h2{
+            margin: 2% 40%;
+            font-size: 25px;
+        }
+
+        .motto1 span {
+            margin: 2% 45%;
+        }
+        .motto1 span{
+            color: blue;
+            font-size: 40px;
+            font-weight: bolder;
+
+        }
+
+        .motto1:hover {
+            transform: translateY(-20px);
+        }
+        .home2 button{
+            border: none;
+            outline: none;
+            padding: 15px;
+            width: 18%;
+            margin: 5% 35%;
+            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
+            border-radius: 15px;
+        }
+        
+        .home2 button a{
+            text-decoration: none;
+            font-size: 20px;
+            color: rgb(255, 255, 255);
+            
+        }
+        .digital img{
+            width: 60%;
+            margin: 5% 20%;
+            object-fit: cover;
+            height: 400px;
+            margin-top: 12%; 
+            border-radius: 3%;
+        }
+        .home2 img{
+            width: 60%;
+            margin: 5% 20%;
+            object-fit: cover;
+            height: 500px;
+            margin-top: 12%; 
+            border-radius: 3%;
+            object-position: top;
+        }
+        footer{
+            color: black;
+            background: white;
+            height: 65px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        footer p{
+            padding-top: 10px;
+            font-size: 20px;
+        }
+        .copy{
+            font-size: 20px;
+            color: rgb(32, 17, 17);
+            font-weight: bolder;
+        }
+        /*button hover */
+        button:hover{
+            background: transparent;
+            border: 2px solid   rgb(32, 17, 17);
+            color: rgb(31, 13, 13);
+           
+            cursor: pointer;
+        }
+        button a:hover{
+            color: rgb(32, 17, 17);
+            font-weight: bold;
+        }
+    }
+   
+    
+
+    </style>
+ 
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="photos/logo3.png" alt="">
+            <h4>Jxs Global</h4>
+        </div>
+       
+        <nav>
+            <ul>
+               
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                
+
+
+            </ul>
+        </nav>
+    </header>
+      
+    
+    <section class="home1">
+        <h4>Your trusted partner in international 
+            business and  marketing solutions</h4>
+            <h2>Elevate Your Brand Today</h2>
+            <button>
+                <a href="contact.html">Book Now</a>
+            </button>
+    </section>
+
+<section class="home2">
+   
+    <div class="motto1">
+        <span><i class='bx bx-star' ></i></span>
+   <h2>Our Drive</h2>
+        <p>At Jxs Global our mission is to empower businesses through 
+            strategic marketing initiatives and drive results.
+        We focus on understanding your unique challenges and delivering
+    tailored solutions that align with your goals.</p>
+    </div>
+    <img src="photos/ocaa2.jpg" alt="">
+<button>
+    <a href="about.html">Discover More</a>
+</button>
+<div class="motto1">
+    <span><i class='bx bx-mobile-vibration' ></i></span>
+    <h2>Digital Marketing</h2>
+        <p>
+            Our digital marketing approach is creatively fueled,
+            and always result focused .Whether your looking to boost your visibility or 
+            grow your brand online
+        </p>
+
+     </div>
+     <div class="digital">
+        <img src="photos/digital.jpg" alt="">
+     </div>
+    
+     <div class="motto1">
+        <span> <i class='bx bx-down-arrow-circle' ></i></span>
+        <h2>Why Us</h2>
+            <p>
+                We connect brands to global opportunities by 
+                crafting tailored marketing strategies, enabling 
+                businesses to thrive in diverse cultural and 
+                economic landscapes.
+            </p>
+    
+         </div>
+         <div class="digital">
+            <img src="photos/why2.jpeg" alt="">
+         </div>
+
+         <div class="motto1">
+            <span> <i class='bx bxs-leaf' ></i></span>
+            <h2>Brand Building</h2>
+                <p>
+                    At Jxs Global We dont just create brands ,
+                     we build identities that 
+                    inspire trust ,spark engagement, and drive growth
+                    .Our  brand development services are designed to capture the
+                     essence of who you are and what you stand for
+                </p>
+        
+             </div>
+             <div class="digital">
+                <img src="photos/brand1.jpeg" alt="">
+             </div>
+
+             <div class="motto1">
+                <span> <i class='bx bx-command' ></i></span>
+                <h2>market Analysis</h2>
+                    <p>
+                       We believe that successful marketing 
+                       begins with understanding the market . 
+                       Our market analysis services provide deep 
+                       insights into consumer behavior,
+                       competitor strategies and current trends.
+                    </p>
+            
+                 </div>
+                 <div class="digital">
+                    <img src="photos/market-analyses1.jpeg" alt=" MARKET ANALYSIS"
+                    id="market">
+                 </div>     
+</section>
+<footer>
+    <p> <span class="copy">&copy;</span> Jxs Global 2025 . All rights reserved</p>
+</footer>
+
+<script>
+    const images=["photos/market-analyses1.jpeg",
+    "photos/analysis1.png",
+    "photos/analysis 3.jpeg","photos/ivan.png"]
+    let firstImage=document.getElementById('market');
+    let index=0;
+    function changeImage(){
+        index=(index+1)% images.length;
+        firstImage.src=images[index];
+    }
+    setInterval(changeImage,5000);
+</script>
+</body>
+</html>
