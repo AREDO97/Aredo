@@ -1,567 +1,2334 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home page</title>
-    
-
+    <title>Gallery - Mentor Secondary School</title>
+    <link rel="shortcut icon" href="images/logo1.jpeg" type="image/x-icon">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-
     <style>
-       
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #7f8c8d;
+        }
 
-        @media(max-width:600px) {
-            
-        
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-        }
-        body{
-            font-family: system-ui, -apple-system, 
-            BlinkMacSystemFont, 
-            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-            'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        header{
-            background-color: rgb(199, 223, 232);
-            height: 68px;
-            border-radius: 2%;
-           
-        }
-        header .logo{
-            display: flex;
-            align-items: center;
-            margin: 0 30%;
-            color: black;
-        }
-        header .logo h4{
-            font-size: 20px;
-            color:  rgb(32, 17, 17);
-        }
-        header .logo img{
-            width: 30px;
-            border-radius: 10px;
-        }
-        nav ul li{
-            list-style: none;
-            display: inline-block;
-            margin-right: 3%;
-        }
-        nav{
-            margin-top: 2%;
-            margin-left: 12%;
-        }
-        nav ul li a{
-            color: black;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        nav ul li::after{
-            content: "";
-            transition: 0.5s;
-            background:  rgb(32, 17, 17);
-            height: 2px;
-            width: 0%;
-            display: block;
-        }
-        nav ul li:hover:after{
-            width: 100%;
-        }
-        .home1{
-            background-image:linear-gradient(rgb(185, 169, 169),
-             rgb(185, 169, 169)), url("photos/market.jpg");
-            background-size: cover;
-            background-position: center;
-           
-            height: 400px;
-            background-position: center;
-        }
-        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
-        */
-        .home1 h4{
-            padding-top:100px ;
-            padding-left: 50px;
-            font-size: 22px;
-            color: rgb(32, 17, 17);
-        }
-        .home1 h2{
-            color: rgb(32, 17, 17);
-           padding-top: 15px;
-            padding-left: 50px;
-            font-size: 35px;
-        }
-        .home1 button{
-            border: none;
-            outline: none;
-            padding: 15px;
-            width: 40%;
-            margin: 5% 25%;
-            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
-            border-radius: 15px;
-        }
-        .home1 button a{
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            font-weight: bold;
-            
-        }
-        .home2{
-            background: rgb(185, 169, 169);
-            height: auto;
-        }
-        .home2 img{
-            width: 70%;
-            margin: 5% 15%;
-            object-fit: cover;
-            height: 300px;
-            margin-top: 12%;
-            object-position: top;
-            border-radius: 2%;
-        }
-        .home2 h2{
-            margin: 0 30%;
-        }
-        .home2 p{
-            margin: 0 20%;
-            font-size: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
+        body {
+          
+            color: var(--text-color);
+            line-height: 1.6;
+            background-color: #f9f9f9;
+  
+        }
+
+/*new */
+
+ 
+        main {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        section {
+            margin-bottom: 4rem;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        section.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .home-page1 {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), 
+            rgba(0, 0, 0, 0.8)), url('images/pp4.jpeg');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            color: white;
+            padding: 8rem 4rem;
+            text-align: left;
+            min-height: 20vh;
+            margin-bottom: 4rem;
+            width: 100%;
+            transition: background-image 1s ease-in-out;
+        }
+
+        .home-page1 p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            margin-left: 50px;
+        }
+        .home-page1 h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 50px;
+            margin-top: -120px;
+        }
+
+
+        .home-page1 h4 SPAN {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: rgb(59, 162, 202);
+        }
+
+        .home-content {
+            padding: 9rem 0 0 0;
+        }
+
+        .button1 {
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            animation: fadeIn 1s ease 0.9s both;
+        }
+
+        .button1:hover {
+            background-color: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button1 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .motto {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-bottom: 4rem;
+        }
+/* background: linear-gradient(to right,white,pink);*/
+/* background-color: rgb(199, 223, 232);*/
         .motto1 {
             background-color: rgb(199, 223, 232);
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
             transition: transform 0.3s ease;
-            flex-wrap: wrap;
-            margin: 0 8%;
-           
-        } 
-        .motto1 p,h2{
-            font-size: 16px;
-            font-weight: 400;
+            margin: 2% 5%;
         }
-        
-        .motto1 h2{
-            margin: 2% 30%;
-            font-weight: bold;
-        }
-        .motto1 h2:hover{
-            text-decoration: line-through;
-        }
-        .motto1 span {
-            margin: 2% 38%;
-        }
-        .motto1 span{
-            color: blue;
-            font-size: 40px;
-            font-weight: bolder;
 
-        }
         .motto1:hover {
             transform: translateY(-20px);
         }
-        .home2 button{
-            border: none;
-            outline: none;
-            padding: 15px;
-            width: 40%;
-            margin: 5% 25%;
-            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
-            border-radius: 15px;
+
+        .motto1 i {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
         }
-        .home2 button a{
-            text-decoration: none;
-            font-size: 20px;
-            color: rgb(255, 255, 255);
-            
+
+        .motto1 h1 {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
         }
-        .digital img{
-            width: 70%;
-            margin: 5% 15%;
-            object-fit: cover;
-            height: 300px;
-            margin-top: 12%; 
+
+        .motto1 p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+           font-weight: 900;
         }
-        footer{
-            color: black;
-            background-color: rgb(199, 223, 232);
-            height: 65px;
-            align-items: center;
-            justify-content: center;
+
+        
+
+        .homepage2 {
             display: flex;
-        }
-        footer p{
-            padding-top: 10px;
-            font-size: 13px;
-            font-weight: 700;
-        }
-        /*button hover */
-        button:hover{
-            background: transparent;
-            border: 2px solid   rgb(32, 17, 17);
-           
-            cursor: pointer;
-        }
-        button a:hover{
-            color: rgb(32, 17, 17);
-            font-weight: bold;
-        }
-        .copy{
-            font-size: 13px;
-            color: rgb(32, 17, 17);
-            font-weight: bolder;
-        }
-    }
-    @media (min-width:601px) {
-        *{
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body{
-            font-family: system-ui, -apple-system, 
-            BlinkMacSystemFont, 
-            'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 
-            'Open Sans', 'Helvetica Neue', sans-serif;
-        }
-        header{
+            align-items: center;
+            gap: 3rem;
             background-color: white;
-            height: 80px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-           border-radius: 2%;
+            padding: 0rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
         }
-        header .logo{
-            display: flex;
-            align-items: center;
-            margin: 0 5%;
-            color: black;
+
+        .homepage2 img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 400px;
+        }
+
+        .homepage2 .content {
             width: 50%;
         }
-        header .logo h4{
-            font-size: 25px;
-        }
-        header .logo img{
-            width: 30px;
-            border-radius: 10px;
-        }
-        nav{
-            width: 70%;
-            margin: 0 20%;
-        }
-        nav ul li{
-            list-style: none;
-            display: inline-block;
-           margin: 0% 1%;
-        }
-        
-        nav ul li a{
-            color: black;
-            text-decoration: none;
-            font-size: 20px;
-        }
-        nav ul li::after{
-            content: "";
-            transition: 0.5s;
-            background:  rgb(32, 17, 17);
-            height: 2px;
-            width: 0%;
-            display: block;
-        }
-        nav ul li:hover:after{
-            width: 100%;
+
+        .homepage2 h2 {
+            font-size: 2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+            text-align: center;
         }
 
-        .home1{
-            background-image:linear-gradient(rgb(185, 169, 169),
-             rgb(185, 169, 169)), url("photos/market.jpg");
-            background-size: cover;
-            background-position: center;
-           
-            height: 400px;
-            background-position: center;
+        .homepage2 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+            padding: 0 4%;
         }
-        /*linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
-        */
-        .home1 h4{
-            padding-top:100px ;
-            padding-left: 280px;
-            font-size: 22px;
-            color: rgb(32, 17, 17);
-        }
-        .home1 h2{
-            color: rgb(32, 17, 17);
-           padding-top: 15px;
-            padding-left: 340px;
-            font-size: 35px;
-        }
-        .home1 button{
-            border: none;
-            outline: none;
-            padding: 15px;
-            width: 18%;
-            margin: 2% 35%;
-            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
-            border-radius: 15px;
-        }
-        .home1 button a{
-            text-decoration: none;
-            font-size: 20px;
+
+        .button2 {
+            background-color: var(--accent-color);
             color: white;
-            
-        }
-        .home2{
-            background: rgb(185, 169, 169);
-            height: auto;
-        }
-        .home2 img{
-            width: 70%;
-            margin: 5% 15%;
-            object-fit: cover;
-            height: 300px;
-            margin-top: 12%;
-        }
-        .home2 h2{
-            margin: 0 30%;
-        }
-        .home2 p{
-            margin: 0 20%;
-            font-size: 20px;
+            border: none;
+            padding: 0.8rem 2rem;
+            font-size: 1rem;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin: 1% 25%;
         }
 
-        .motto1 {
-            background-color: rgb(199, 223, 232);
-            padding: 2rem;
+        .button2:hover {
+            background-color: #c0392b;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .button2 a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .homepage3 {
+            text-align: center;
+        }
+
+        .homepage3 h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+        }
+
+        .homepage3 p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .home-pictures {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+            /* rgb(247, 231, 231)*/
+        .pictures {
+            background: linear-gradient( white,
+            rgb(155, 202, 221));
             border-radius: 8px;
+            overflow: hidden;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: transform 0.3s ease;
             flex-wrap: wrap;
-            margin: 0 15%;
-            height: 300px;
            
-        } 
-        .motto1 p,h2{
-            font-size: 20px;
-        }
-        .motto1 h2{
-            margin: 2% 40%;
-            font-size: 25px;
-        }
-
-        .motto1 span {
-            margin: 2% 45%;
-        }
-        .motto1 span{
-            color: blue;
-            font-size: 40px;
-            font-weight: bolder;
 
         }
+        .pictures  span{
+            text-align: left;
+            color: black;
+        }
 
-        .motto1:hover {
-            transform: translateY(-20px);
+        .pictures:hover {
+            transform: translateY(-10px);
         }
-        .home2 button{
-            border: none;
-            outline: none;
-            padding: 15px;
-            width: 18%;
-            margin: 5% 35%;
-            background: linear-gradient(rgb(31, 13, 13),rgb(117, 62, 62));
-            border-radius: 15px;
+
+        .pictures img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
         }
+
+        .pictures h2 {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: skyblue;
+        }
+
+        .pictures span {
+            display: block;
+            padding: 0 1.5rem 1.5rem;
+            color:rgba(41, 38, 38, 0.911);
+            font-weight: 530;
+            color: var(--text-light);
+          
+        }
+        /*picture*/
+
+       
+            
+       
+    
+       
+        /*pict big screen    */
+    @media (min-width:600px) {
+    .btn{
+        display: none;
+    }
+
+
+    .badge img{
+    width: 150px;
+   object-fit: cover;
+}   
+/*  background-color: rgb(247, 242, 242);*/
         
-        .home2 button a{
-            text-decoration: none;
-            font-size: 20px;
-            color: rgb(255, 255, 255);
+
+}
+       
+        .hompage4 {
+            text-align: center;
+        }
+
+        .homepage4-text h2 {
+            font-size: 1.5rem;
+            color: skyblue;
+            margin-bottom: 1rem;
+        }
+        .homepage4-text h2 {
+            color: skyblue;
+        }
+        .homepage4-text p {
+            color: var(--text-light);
+            margin-bottom: 3rem;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .main-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .eduction-programs {
+            background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
             
         }
-        .digital img{
-            width: 60%;
-            margin: 5% 20%;
-            object-fit: cover;
-            height: 400px;
-            margin-top: 12%; 
-            border-radius: 3%;
+        .eduction-programs h2{
+            font-size: 1.2rem;
+            color: skyblue;
         }
-        .home2 img{
-            width: 60%;
-            margin: 5% 20%;
-            object-fit: cover;
-            height: 500px;
-            margin-top: 12%; 
-            border-radius: 3%;
-            object-position: top;
-        }
-        footer{
-            color: black;
-            background: white;
-            height: 65px;
-            align-items: center;
-            justify-content: center;
-            display: flex;
-        }
-        footer p{
-            padding-top: 10px;
-            font-size: 20px;
-        }
-        .copy{
-            font-size: 20px;
-            color: rgb(32, 17, 17);
-            font-weight: bolder;
-        }
-        /*button hover */
-        button:hover{
-            background: transparent;
-            border: 2px solid   rgb(32, 17, 17);
-            color: rgb(31, 13, 13);
+/*program content*/
+
+.eduction-programs-content1{
+         background-color: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease;
            
-            cursor: pointer;
+            text-align: center;
+            color: var(--text-light);
+            padding: 1.5rem;
+}
+.eduction-programs-content1 span i{
+    color: skyblue;
+    font-size: 20px;
+    margin: 5% auto;
+}
+
+.eduction-programs-content1 .chanda{
+margin-top: 5%;
+}
+
+.eduction-programs-content1:hover{
+    transform: translateY(-10px);
+}
+.eduction-programs-content1 h4{
+    color: rgb(41, 39, 39);
+}
+
+.eduction-programs-content1 h5{
+    color: rgba(49, 46, 46, 0.863);
+}
+
+.homepage4-text h2 span{
+    border-left: 4px solid #2c3e50;
+    padding: 1%;
+    margin: 1% 5%;
+}
+        .eduction-programs:hover {
+            transform: translateY(-10px);
         }
-        button a:hover{
-            color: rgb(32, 17, 17);
+
+        .eduction-programs img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            
+        }
+        
+
+        .eduction-programs-content {
+            padding: 1.5rem;
+        }
+
+        .eduction-programs-content h2 {
+            font-size: 1.2rem;
+            color: skyblue;
+            margin-bottom: 1rem;
+        }
+
+        .eduction-programs-content p {
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            text-align: left;
+        }
+
+
+/*footer new style*/
+
+
+       
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 768px) {
+         
+
+            .home-page1 {
+                padding: 4rem 1rem;
+            }
+
+            .home-page1 h2 {
+                font-size: 1.8rem;
+            }
+
+            .homepage2 {
+                flex-direction: column;
+                padding: 2rem;
+            }
+
+            .homepage2 img,
+            .homepage2 .content {
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+
+
+        @media (max-width: 480px) {
+            body {
+                padding-top: 120px;
+                /* Adjusted for mobile header height */
+            }
+
+            
+
+            .motto {
+                grid-template-columns: 1fr;
+            }
+
+            .home-pictures {
+                grid-template-columns: 1fr;
+            }
+
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+        }
+       .read{
+            border: none;
+            outline: none;
+            border-radius: 12px;
+            background-color:  #3498db;
+            color: white;
+            padding: 10px;
+           
+        }
+        .pictures span .hide{
+            display: none;
+            margin-left: -22px;
+        } 
+        
+        .buttons{
+            margin: 0 26%;
+        }
+        .buttons button{
+            background-color: white;
+            border: none;
+            padding: 8px;
+            border-radius: 5px;
+            margin: 1% 10%;
+          
+        }
+        .buttons button i{
+            color: rgb(14, 4, 4);
             font-weight: bold;
+            font-size: 35px;
         }
-    }
-   
+        .btn button{
+           
+            border: none;
+            background-color:rgb(253, 199, 208);
+        }
+        .btn button i{
+            color: blue;
+            font-size: 35px;
+        }
+        /*special script*/
+hr{
+    width: 15%;
+    margin: 2% 40%;
+}
+.content h2{
+    font-size: 1.2rem;
+    margin: 2% 20%;
+}
+
+
+
+
+
+/*picture*/
+
+.picture{
+            background-color: white;
+            padding: 1.2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            text-align: left;
+            transition: transform 0.3s ease;
+            flex-wrap: wrap;
+            border: 1px solid rgb(235, 223, 223);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.09);
+            transition: transform 0.3s ease;
+            width: 98%;
+            margin: 5% 2%;
+            color:#333;
+            
+        }
+        
+.picture p{
     
+color: var(--text-light);
+}
+        .picture:hover {
+            transform: translateY(-10px);
+        }
+        .picture  span{
+            text-align: left;  
+            color: var(--text-light);
+
+        }
+
+        .picture:hover {
+            transform: translateY(-10px);
+        }
+
+        .picture h2 {
+            font-size: 1.4rem;
+            padding: 1.5rem 1.5rem 0.5rem;
+            color: skyblue;
+        }
+        .button2{
+            background:  #3498db;
+        }
+
+        .text1{
+            color: skyblue;
+        }
+       @media (max-width:599px) {
+        .spans{
+            margin: 2% 40%;
+
+        }
+            /* ai*/
+
+    
+.spans span {
+  cursor: pointer;
+  color:gray;
+  font-size: 60px;
+  transition: color 0.3s;
+}
+.spans span.active {
+  color: white;
+}
+
+.homepage2 img {
+            width: 100%;
+            border-radius: 8px;
+            object-fit: cover;
+            height: 300px;
+        }
+
+        /*SS*/
+        .spanss{
+            margin: 2% 20%;
+
+        }
+            /* ai*/
+
+    
+.spanss span {
+  cursor: pointer;
+  color:gray;
+  font-size: 60px;
+  transition: color 0.3s;
+}
+.spanss span.active {
+  color: white;
+}
+
+       }
+
+   @media (min-width:600px) {
+    .spans{
+            margin: 2% 20%;
+
+        }
+            /* ai*/
+
+    
+.spans span {
+  cursor: pointer;
+  color:gray;
+  font-size: 60px;
+  transition: color 0.3s;
+}
+.spans span.active {
+  color: white;
+}
+/*SS*/
+.spanss{
+            margin: 2% 20%;
+
+        }
+            /* ai*/
+
+    
+.spanss span {
+  cursor: pointer;
+  color:gray;
+  font-size: 60px;
+  transition: color 0.3s;
+}
+.spanss span.active {
+  color: white;
+}
+
+   }     
+        
+      /*old*/
+      .main-content1 {
+  width: 60%;
+  margin: 2% auto;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.quote-icon i {
+  font-size: 2em;
+  color: #555;
+}
+
+.quote-text {
+  font-size: 1.2em;
+  margin: 1em 0;
+}
+
+.underline {
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: #333;
+  margin: 0.5em auto;
+}
+
+.author-name {
+  font-weight: bold;
+  color: #555;
+}
+
+.navigation-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+}
+
+.navigation-dots .dot {
+  cursor: pointer;
+  font-size: 2em;
+  margin: 0 0.3em;
+  color: gray;
+  transition: color 0.3s;
+}
+
+.navigation-dots .dot.active {
+  color: #333;
+} 
+      /*old*/  
+
+   
+
+
+/*SLIDER*/
+.carousel-container {
+  width: 100%;
+  overflow: hidden; /* hide overflow */
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  will-change: transform;
+}
+
+.slide {
+  width: 96%;        /* each slide fills container */
+  flex-shrink: 0;     /* prevent shrinking */
+  object-fit: cover;
+  height: 400px;      /* adjust to taste */
+  border-radius: 5%;
+  margin: 2% 2%;         /* optional spacing */
+}
+
+/* Example: smaller height on narrow screens */
+@media (max-width: 599px) {
+  .slide {
+    height: 300px;
+    object-fit: cover;
+  }
+}
+@media (min-width:600px) {
+    .slide {
+    height: 450px;
+    border-radius: 1%;
+    object-fit: cover;
+  }
+}
+@media (max-width:599px) {
+    .main-content1{
+      background-color: rgb(199, 223, 232);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            height: 380px;
+            width: 90%;
+            overflow: hidden;
+}
+}
+@media (min-width:600px) {
+    .main-content1{
+      background-color: rgb(199, 223, 232);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            text-align: center;
+            transition: transform 0.3s ease;
+            
+            overflow: hidden;
+              width: 90%;
+          max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+           
+}
+
+}
+/*welcome*/
+@media (max-width:599px) {
+    .homepage9 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+        }
+
+        
+        .homepage9 .content {
+            width: 100%;
+        }
+
+        .homepage9 h2 {
+            font-size: 1.2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+        }
+
+        .homepage9 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+        .welcomed{
+            display: none;
+        }
+}
+@media (min-width:600px) {
+      .homepage9 {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+        }
+
+        
+        .homepage9 .content {
+            width: 100%;
+        }
+
+        .homepage9 h2 {
+            font-size: 1.2rem;
+            color: 
+            skyblue;
+            margin-bottom: 1.5rem;
+        }
+
+        .homepage9 p {
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+}
+/*our services*/
+
+    #ourservices-slideshow {
+      position: relative;
+      width: 60%;
+      max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      margin: 1% 0%;
+    }
+
+    .ourservices-slide {
+      display: none;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      transition: opacity 0.8s ease;
+    }
+
+    .ourservices-slide h2 {
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .ourservices-slide p {
+      font-size: 1rem;
+      line-height: 1.5;
+      max-width: 90%;
+    }
+
+    /* Unique Backgrounds */
+    #ourservices-health { background-color: #9C27B0; }
+    #ourservices-entertainment { background-color: #FF5722; }
+    #ourservices-boarding { background-color: #3F51B5; }
+    #ourservices-internet { background-color: #009688; }
+    #ourservices-security { background-color: #4CAF50; }
+
+    .ourservices-nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 2rem;
+      background: rgba(0, 0, 0, 0.3);
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 10;
+    }
+
+    .ourservices-nav-btn:hover {
+      background: rgba(0, 0, 0, 0.6);
+    }
+
+    #ourservices-prev { left: 15px; }
+    #ourservices-next { right: 15px; }
+/*our services*/
+@media (max-width:599px) {
+      #ourservices-slideshow {
+      position: relative;
+      width: 90%;
+      max-width: 700px;
+      height: 330px;
+      overflow: hidden;
+      border-radius: 15px;
+      box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
+      background: #fff;
+      margin: 1% 4%;
+    }
+
+}
+/*contains-two*/
+@media (min-width:600px) {
+   .contains-two{
+    display: flex;
+   vertical-align: top;
+} 
+}
+/*h2*/
+@media (max-width:599px) {
+    .my-h2{
+ text-align: center;
+ margin: 2% 0;
+}
+}
+@media (max-width:599px) {
+    .my-hp{
+ text-align: center;
+ margin: 2% 0;
+}
+}
+
+
+
+
+@media (min-width:600px) {
+    .my-h2{
+    display: none;
+}
+}
+/*2*/
+
+/*3*/
+@media (max-width:599px) {
+    .my-h3{
+    margin: 2% 10%;
+    margin-top: 10%;
+}
+}
+
+@media (min-width:600px) {
+    .my-h3{
+    display: none;
+}
+}
+/*first background*/
+@media (min-width:600px) {
+    .home-content p{
+        margin: 2% 30%;
+    }
+    .home-content h4{
+        margin: 2% 30%;
+    }
+    .spans{
+         margin: 2% 30%;
+    }
+}
+@media (min-width:600px) {
+      .home-page1 {
+min-height: 20vh;
+      }
+       .home-page1 p {
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
+            animation: fadeInUp 1s ease 0.3s both;
+            margin-left: 120px;
+        }
+        .home-page1 h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            margin-left: 120px;
+            margin-top: -120px;
+        }
+
+
+        .home-page1 h4 SPAN {
+            font-size: 2.0rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease 0.6s both;
+            color: rgb(59, 162, 202);
+        }
+
+        #omoding{
+            display: none;
+        }
+}
+
+/*footer again*/
+@media (max-width:599px) {
+     
+
+        /*no padding*/
+          .homepage2 {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+            background-color: white;
+            padding: 0rem;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+           
+           
+        }
+        
+}
+
+/*testimonial*/
+ .testimonial-slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.testimonial {
+  flex: 0 0 100%;
+  scroll-snap-align: start;
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.quote {
+  font-style: italic;
+  color: #555;
+}
+
+.author {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Responsive adjustments */
+@media (min-width: 600px) {
+  .testimonial {
+    flex: 0 0 48%;
+  }
+}
+
+@media (min-width: 900px) {
+  .testimonial {
+    flex: 0 0 30%;
+  }
+}
+@media (max-width:599px) {
+    .what-people{
+        color: skyblue;
+        margin: 2% 15%;
+    }
+}
+@media (min-width:600px) {
+    .what-people{
+        color: skyblue;
+        margin: 2% 30%;
+    }
+ .my-icons{
+    display: none;
+ }
+}
+.welcome-to-ppss{
+  text-align: center;
+}
+.academic-excellence{
+  margin: 2% 0%;
+  text-align: center;
+}
+
+.ourservices-nav-btn{
+  display: none;
+}
+
+/*video*/
+   .ppss-campus-section {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.ppss-campus-video {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ppss-campus-video:hover {
+  transform: scale(1.01);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.35);
+}
+
+.ppss-campus-fullscreen {
+  position: absolute;
+  bottom: 20px;
+  right: 25px;
+  background: #009688;
+  color: #fff;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition:  0.3s ease;
+}
+
+.ppss-campus-fullscreen:hover {
+  background: #00796B;
+}
+
+@media (max-width: 599px) {
+  .ppss-campus-section {
+    padding: 10px;
+  }
+
+  .ppss-campus-fullscreen {
+    bottom: 15px;
+    right: 15px;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+  }
+}
+.my-hv{
+  text-align: center;
+  margin: 2% 5%;
+}
+@media (max-width:599px) {
+  .my-hv{
+  text-align: center;
+  margin-top: 8%;
+  font-size: 18px;
+}
+}
+/*last video*/
+
+/*testimonials*/
+
+    .uin-slider-container {
+      background: var(--uin-bg);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: var(--uin-card-max-width);
+      width: 100%;
+      overflow: hidden;
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      position: relative;
+       height: 330px;
+  
+    }
+
+    @media (min-width:600px) {
+       .uin-slider-container {
+      background: var(--uin-bg);
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      max-width: var(--uin-card-max-width);
+      width: 75%;
+      overflow: hidden;
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      position: relative;
+      height: 330px;
+      margin: 2% 10%;
+    }
+    }
+    .uin-slide {
+      display: none;
+      transition: opacity 0.5s;
+    }
+    .uin-slide.uin-active {
+      display: block;
+    }
+    .uin-photo {
+      width: 100px;
+      height: 100px;
+      border: 3px solid #fff;
+      border-radius: 50%;
+      margin: 0 auto 1.2rem;
+      object-fit: cover;
+      object-position: top;
+    }
+    .uin-quote-text {
+      font-size: 1rem;
+      line-height: 1.5;
+      margin: 0 1rem;
+      position: relative;
+    }
+    .uin-quote-text::before {
+      content: '“';
+      position: absolute;
+      left: -0.5rem;
+      top: -0.5rem;
+      font-size: 2.5rem;
+      color: rgba(0,0,0,0.1);
+    }
+    .uin-author {
+      margin-top: 1.5rem;
+      font-style: italic;
+      font-weight: 700;
+      color: var(--uin-accent);
+    }
+    .uin-year-range {
+      font-size: 0.9rem;
+      margin-top: 0.2rem;
+      color: var(--uin-accent);
+    }
+    .uin-dots-wrapper {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
+    .uin-dot {
+      font-size: 2rem;
+      margin: 0 0.3rem;
+      cursor: pointer;
+      color: var(--uin-dot-inact);
+      transition: color 0.3s;
+    }
+    .uin-dot.uin-active {
+      color: var(--uin-dot-act);
+    }
+    @media (max-width: 480px) {
+      .uin-slider-container {
+        padding: 1.5rem 1rem 2rem;
+      }
+      .uin-photo {
+        width: 80px;
+        height: 80px;
+      }
+    }
+/*end of testimonials*/
+
+/*form*/
+.download-box {
+      text-align: center;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .download-box:hover {
+      transform: translateY(-5px);
+    }
+
+    .download-icon {
+      display: none;
+    }
+
+    .bx-download-icon {
+      font-size: 80px;
+      color: #3498db;
+      margin-bottom: 20px;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      color: #1f3c6e;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .download-btn {
+      padding: 12px 30px;
+      background-color: #3498db;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+    }
+
+    .download-btn:hover {
+      background-color:#3498db ;  /* #3498db*/
+      transform: scale(1.05);  /*#e8a722*/
+    }
+
+    @media (max-width: 600px) {
+      .download-box {
+        width: 90%;
+        padding: 1.5rem;
+      }
+      .bx-download-icon {
+        font-size: 60px;
+      }
+      .title {
+        font-size: 1rem;
+      }
+      .download-btn {
+        font-size: 0.9rem;
+      }
+    }   
+    
+/*new end*/
+     
+
+    /* Header */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #003366;
+      color: white;
+      padding: 12px 20px;
+      position: relative;
+      z-index: 1001;
+      height: 100px;
+    background-color:  rgb(199, 223, 232);
+  
+    }
+
+    .logo img {
+      height: 95px;
+      width: 85px;
+    }
+
+    .btn .buttonElement {
+      background: none;
+      border: none;
+      color:  blue;
+      font-size: 35px;
+      cursor: pointer;
+    }
+
+    /* Mobile Overlay */
+    .menu-overlay {
+        margin-top: 10%;
+      position:absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 65%;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding-top: 60px;
+      transform: scaleY(0);
+      transform-origin: top;
+      transition: transform 0.7s ease-in-out;
+    }
+
+    .menu-overlay.active {
+      transform: scaleY(1);
+    }
+
+    .menu-container {
+      width: 80%;
+      max-width: 500px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .menu-container nav ul {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .menu-container nav ul li a {
+      display: block;
+      width: 100%;
+      padding: 14px 20px;
+      background-color: rgb(230, 216, 216);
+      background: #f9f9f9;
+
+      border-radius: 8px;
+      font-size: 20px;
+      color: #003366;
+      text-decoration: none;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+      transition: background 0.3s ease, color 0.3s ease;
+      font-weight: 600;
+    }
+
+    .menu-container nav ul li a:hover {
+      background-color: #eef4ff;
+      color: #002244;
+    }
+
+    /* Desktop Nav */
+    .desktop-nav {
+      display: none;
+    }
+
+    /* Larger Screens */
+    @media (min-width: 768px) {
+      .btn {
+        display: none;
+      }
+
+      .desktop-nav {
+        display: flex;
+        gap: 20px;
+      }
+
+      .desktop-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 10px 15px;
+        font-size: 20px;
+        transition: background 0.3s ease;
+        color: #333;
+        font-weight: bold;
+      }
+
+      .desktop-nav a:hover {
+        background: rgba(78, 76, 76, 0.1);
+        border-bottom: 2px solid white;
+      }
+
+      .menu-overlay {
+        display: none;
+      }
+       .logo img {
+      height: 95px;
+      width: 85px;
+    }
+    }
+
+
+ :root {
+  --primary-color: rgb(199, 223, 232);
+  --secondary-color: rgb(97, 142, 168); /* Example secondary */
+}
+
+/* Footer Styles */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 3rem 1rem;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.footer-content-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Badge Image */
+.badge img {
+  width: 150px;
+  object-fit: cover;
+  margin: 20px auto;
+  display: block;
+}
+
+/* Social Links */
+.social-links-footer {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.social-links-footer a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--secondary-color);
+  background-color:  #3498db;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 1.0rem;
+}
+
+.social-links-footer a:hover {
+  transform: translateY(-3px);
+}
+
+/* Responsive image spacing */
+@media (min-width: 768px) {
+  .badge img {
+    margin: 2% auto;
+  }
+}
+
 
     </style>
- 
 </head>
 
 <body>
-    <header>
-        <div class="logo">
-            <img src="photos/logo3.png" alt="">
-            <h4>Jxs Global</h4>
-        </div>
-       
-        <nav>
-            <ul>
-               
-
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                
-
-
-            </ul>
-        </nav>
-    </header>
-      
-    
-    <section class="home1">
-        <h4>Your trusted partner in international 
-            business and  marketing solutions</h4>
-            <h2>Elevate Your Brand Today</h2>
-            <button>
-                <a href="contact.html">Book Now</a>
-            </button>
-    </section>
-
-<section class="home2">
-   
-    <div class="motto1">
-        <span><i class='bx bx-star' ></i></span>
-   <h2>Our Drive</h2>
-        <p>At Jxs Global our mission is to empower businesses through 
-            strategic marketing initiatives and drive results.
-        We focus on understanding your unique challenges and delivering
-    tailored solutions that align with your goals.</p>
+     <!-- Header -->
+  <header>
+    <div class="logo">
+      <img src="images/logo1-removebg.png" alt="Logo">
     </div>
-    <img src="photos/ocaa2.jpg" alt="">
-<button>
-    <a href="about.html">Discover More</a>
-</button>
-<div class="motto1">
-    <span><i class='bx bx-mobile-vibration' ></i></span>
-    <h2>Digital Marketing</h2>
-        <p>
-            Our digital marketing approach is creatively fueled,
-            and always result focused .Whether your looking to boost your visibility or 
-            grow your brand online
-        </p>
 
-     </div>
-     <div class="digital">
-        <img src="photos/digital.jpg" alt="">
-     </div>
-    
-     <div class="motto1">
-        <span> <i class='bx bx-down-arrow-circle' ></i></span>
-        <h2>Why Us</h2>
-            <p>
-                We connect brands to global opportunities by 
-                crafting tailored marketing strategies, enabling 
-                businesses to thrive in diverse cultural and 
-                economic landscapes.
-            </p>
-    
-         </div>
-         <div class="digital">
-            <img src="photos/why2.jpeg" alt="">
-         </div>
+    <!-- Mobile button -->
+    <div class="btn">
+      <button class="buttonElement" onclick="toggleMenu()"> <i class='bx bx-menu'></i></button>
+    </div>
 
-         <div class="motto1">
-            <span> <i class='bx bxs-leaf' ></i></span>
-            <h2>Brand Building</h2>
-                <p>
-                    At Jxs Global We dont just create brands ,
-                     we build identities that 
-                    inspire trust ,spark engagement, and drive growth
-                    .Our  brand development services are designed to capture the
-                     essence of who you are and what you stand for
-                </p>
+    <!-- Desktop nav -->
+    <nav class="desktop-nav">
+      <a href="index.html"><i class='bx bx-home'></i> Home</a>
+      <a href="profile.html"><i class='bx bx-user'></i> Staff Profile</a>
+      <a href="gallery.html">  <i class='bx bx-image'></i> Gallery</a>
+      <a href="contact.html"><i class='bx bx-phone'></i> Contact</a>
+      <a href="faq.html"><i class='bx bx-help-circle' ></i>FAQs</a>
+    </nav>
+  </header>
+
+  <!-- Mobile Overlay Navigation -->
+  <div class="menu-overlay" id="menuOverlay">
+    <div class="menu-container">
+      <nav>
+        <ul>
+          <li><a href="index.html"> Home</a></li>
+          <li><a href="profile.html"> Staff Profile</a></li>
+          <li><a href="gallery.html">   Gallery</a></li>
+          <li><a href="contact.html"> Contact</a></li>
+          <li><a href="faq.html">FAQs</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>   
+  <!--middle -->    
+<section class="home-page1 visible">
+        <div class="home-content">
+            <h4 class="text1"> PALLISA PROGRESSIVE SECONDARY SCHOOL</h4>
+            <p class="chanda">Nurturing curiosity,fostering growth, and guiding students towards their dreams.</p>
+        </div>
+        <!--spans-->
+        <div class="spans">
+            <span class="span1">.</span>
+            <span class="span2">.</span>
+            <span class="span3">.</span>
+
+        </div>
+
         
-             </div>
-             <div class="digital">
-                <img src="photos/brand1.jpeg" alt="">
+    </section>
+  
+    <h2 id="ppssUniqueTyper" class="ppss-type-heading"></h2>
+
+    
+    <main>
+ 
+
+        <section class="motto">
+            <div class="motto1">
+                <i class='bx bxl-telegram'></i>
+                <h1>SCHOOL MOTTO</h1>
+                <p>Building Destiny Solutions</p>
+            </div>
+
+            <div class="motto1">
+                <i class='bx bx-home'></i>
+                <h1>SCHOOL VISION</h1>
+                <P>
+                    To provide innovative,scientific,<br>comprehensive integral and global career
+                 </P>
+            </div>
+            <div class="motto1">
+                <i class='bx bxs-graduation'></i>
+                <h1>SCHOOL MISSION</h1>
+                <p>To be a center of scientific 
+                    and technological excellence of high quality education</p>
+            </div>
+            <div class="motto1">
+                <i class='bx bxs-bible'></i>
+                <h1>SCHOOL VALUES</h1>
+                <p>God Fearing, Discipline, Self-Drive,
+                     High self-esteem. </p>
+            </div>
+        </section>
+
+        
+<!--sliding images-->
+<div class="carousel-container">
+  <div class="carousel-track">
+    <img src="images/pp4.jpeg" alt="" class="slide">
+    <img src="images/alevel-students.jpg" alt="" class="slide" >
+    <img src="images/scroll1.jpg" class="slide">
+    <img src="images/scroll2.jpg" class="slide">
+    <img src="images/scroll3.jpg" class="slide">
+    <img src="images/students.jpg" alt="" class="slide">
+   
+
+  </div>
+</div>
+<!--sliding images-->
+
+
+       <!--welcome text               <img src="images/science-fair.jpg" alt="Academic Excellence" class="gud">
+-->
+        
+         <section class="homepage9">
+            <div class="content">
+                <h2 class="welcome-to-ppss">WELCOME TO PPSS</h2>
+                <p>Welcome to Pallisa Progressive Secondary School,
+                    an institution dedicated to academic excellence and holistic 
+                    student development.Our school provides a safe,supportive,and inspiring 
+                    environment where every learner is empowered to grow academically,socially 
+                    and morally. <span class="welcomed">
+                        Your journey with us begins now.
+                        Explore the opportunities that lie ahead, connect with our vibrant traditions 
+                    and values, and join us in building a legacy of excellence.
+                    </span>
+                    
+                    </p>
+            </div>
+        </section>
+<!--welcome text-->
+        <section class="homepage2">
+            <img src="images/alevel-students.jpg" alt="Academic Excellence" class="gud">
+
+            <div class="content">
+                <h2 class="academic-excellence">Academic Excellence</h2>
+                <p>At Pallisa Progressive Secondary School,
+                     We prioritize high academic standards 
+                     ensuring that our students are well
+                    prepared for their future endeavors.
+                     Our dedicated faculty employs innovative teaching methods that
+                    foster a love for learning.</p>
+                <button class="button2"><a href="profile.html">Discover More</a></button>
+            </div>
+        </section>
+
+        <section class="homepage3">
+        
+
+            <div class="home-pictures">
+
+                <div class="picture">
+                    
+                    <h2> <i class='bx bxs-quote-alt-left'></i> Why join us today?</h2>
+                    <span>
+                        Pallisa Progressive is a beacon of educational 
+                        excellence. Renowned 
+                        for its commitment to high academic standards.
+                        At PPSS students excel
+                         academically while developing
+                          essential life skills,leadership
+                        abilities and strong moral values-preparing 
+                        them to thrive in a competitive
+                        and ever-changing world.   
+                         <i class='bx bxs-quote-alt-right'></i>
+                     </span>
+                </div>
+                <div class="picture">
+                    
+                    <h2><i class='bx bxs-quote-alt-left'></i>
+                         Your Future Starts Here!</h2>
+                    <span>Join a learning environment that nurtures innovation,
+                        critical thinking, and real-world skills.Our 
+                        competency-based education 
+                        prepares you for success in academics,careers, and beyond. 
+                        Take the first step towards a brighter future with us!
+                        <i class='bx bxs-quote-alt-right'></i>
+                     </span>
+                </div>
+
+            
+        </section>
+
+<!--facilities-->
+<section class="homepage2">
+    <img src="images/science-fair.jpg" alt="Science Fair" class="path">
+    <div class="content">
+        <h2>Our Facilities</h2>
+        <p> Our school is equipped with essential learning facilities
+            that support student's academic growth.The library provides a quiet and resourceful place for 
+            reading <br>
+            Our science laboratory provides students with hands-on
+            experience to explore scientific concepts through practical experiments
+            <br>
+            In addition,our computer lab is equipped with modern computers
+            and internet access,giving students the opportunity to develope digital skills 
+            and conduct research..</p>
+        <button class="button2"><a href="contact.html">Apply Now</a></button>
+    </div>
+</section>
+
+<!--facilities-->
+
+        <section class="hompage4">
+            <div class="homepage4-text">
+                <h2>Innovative Education Programs   <i class='bx bxs-hand-down'></i></h2>
+                <p>Explore the diverse range of programs designed 
+                    to enhance learning and personal growth</p>
+            </div>
+
+            <div class="main-content">
+                <div class="eduction-programs">
+                    <img src="images/culture.jpg" alt="Arts and Culture">
+                    <div class="eduction-programs-content">
+                        <h2>Arts and Culture</h2>
+                        <p>The arts and culture program encourage creativity
+                             and artistic expression. Students
+                            participate in various disciplines, 
+                            including music, drama, visual arts, 
+                            promoting cultural
+                            awareness and self confidence through
+                             performances and exhibitions.</p>
+                    </div>
+                </div>
+
+                <div class="eduction-programs">
+                    <img src="images/playground1.jpeg" alt="Sports and Wellness">
+                    <div class="eduction-programs-content">
+                        <h2>Sports and Wellness</h2>
+                        <p>Our sports and wellness program focuses on 
+                            physical health and team work. Regular
+                             physical
+                            activities, competitions and wellness workshops
+                             cultivate a healthy lifestyle and teach the
+                            value of discipline, respect and sportsmanship.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+                <!--others-->
+         <section class="hompage4">
+           
+            <div class="main-content">
+                <div class="eduction-programs">
+                    <img src="images/ror (2).jpg" alt="DEBATES IMAGE">
+                    
+                    <div class="eduction-programs-content">
+                        <h2>School Debates</h2>
+                        <p>These helps students to learn through friendly competitions,
+                            examine controversial topics and strengthen skills in the areas
+                            of leadership,team building and verbal presentation.</p>
+                    </div>
+                </div>
+<!--                  <img src="images/media.jpg" alt="">
+ -->
+                <div class="eduction-programs">
+                    <img src="images/lab2.jpeg" alt="School Media">
+                    <div class="eduction-programs-content">
+                        <h2>School Media</h2>
+                        <p>The school media club promotes creativity and communication by engaging students 
+                            in digital content creation.It plays a vital role in documenting school activities and 
+                            producing media content.</p>
+                    </div>
+                </div>
+                </section>
+             <!--our services-->
+
+             <div class="contains-two" >
+ <h2 style="color: #009688;" class="my-h2"> School Life Overview</h2>
+   
+         <div id="ourservices-slideshow">
+    <div class="ourservices-slide" id="ourservices-health">
+      <h2>Health</h2>
+      <p>We operate a well-established and fully equipped sick bay, staffed by a qualified healthcare professional who is available throughout the school day.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-entertainment">
+      <h2>Entertainment</h2>
+      <p>Students enjoy access to music, drama, sports and co-curricular clubs to promote creativity, teamwork, and relaxation.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-boarding">
+      <h2>Boarding</h2>
+      <p>Our clean and secure dormitories provide a comfortable home-away-from-home, with meals and supervision included.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-internet">
+      <h2>Internet</h2>
+      <p>Students benefit from fast and safe internet access in our computer lab for research, digital learning, and assignments.</p>
+    </div>
+
+    <div class="ourservices-slide" id="ourservices-security">
+      <h2>Security</h2>
+      <p>The school maintains a robust and well-structured security system to ensure safety of all students, staff and visitors.</p>
+    </div>
+
+    <button class="ourservices-nav-btn" id="ourservices-prev">&#10094;</button>
+    <button class="ourservices-nav-btn" id="ourservices-next">&#10095;</button>
+  </div>
+
+             <!--our services  -->
+<!--
+        what our students say-->
+        <section class="hompage4">
+            <div class="homepage4-text">
+                <h2 class="my-h3"> Voice of the Students</h2>
+              <div class="uin-slider-container" id="uinTestimonialSlider">
+  <div class="uin-slide uin-active">
+    <img src="images/emurwon-pic.jpg" class="uin-photo" alt="Student photo">
+    <p class="uin-quote-text">Education here is more than books—it's about diversity and preparing for a bright future.</p>
+    <div class="uin-author">— Emurwon Robert</div>
+    <div class="uin-year-range">2020–2024</div>
+  </div>
+  <div class="uin-slide">
+    <img src="images/collins1 (1).jpg" class="uin-photo" alt="Student photo">
+    <p class="uin-quote-text">Pallisa Progressive shaped not only my mind but also my character.</p>
+    <div class="uin-author">— Alutia Collins</div>
+    <div class="uin-year-range">2021–2024</div>
+  </div>
+  <div class="uin-slide">
+    <img src="images/odele-john2.jpg" class="uin-photo" alt="Student photo">
+    <p class="uin-quote-text">The learning environment is enjoyable and the spiritual guidance kept me grounded.</p>
+    <div class="uin-author">— Odele John</div>
+    <div class="uin-year-range">2019–2023</div>
+  </div>
+
+  <div class="uin-dots-wrapper" id="uinSliderDots">
+    <span class="uin-dot uin-active" data-uin-index="0">•</span>
+    <span class="uin-dot" data-uin-index="1">•</span>
+    <span class="uin-dot" data-uin-index="2">•</span>
+  </div>
+</div>
+ 
+
+          
+        </section>
              </div>
 
-             <div class="motto1">
-                <span> <i class='bx bx-command' ></i></span>
-                <h2>market Analysis</h2>
-                    <p>
-                       We believe that successful marketing 
-                       begins with understanding the market . 
-                       Our market analysis services provide deep 
-                       insights into consumer behavior,
-                       competitor strategies and current trends.
-                    </p>
-            
-                 </div>
-                 <div class="digital">
-                    <img src="photos/market-analyses1.jpeg" alt=" MARKET ANALYSIS"
-                    id="market">
-                 </div>     
+           
+               
+        <h2 class="what-people">What People Say</h2>
+<!--what people say-->
+<div class="testimonial-slider">
+  <div class="testimonial">
+    <p class="quote">“The school prioritizes individual attention and support to each student. It has a diverse and inclusive atmosphere.”</p>
+    <h4 class="author">Mr. Omurwon Robert</h4>
+  </div>
+  <!-- Additional testimonials -->
+  <div class="testimonial">
+    <p class="quote">“The school performs consistently well in exams; many students qualify for good institutions after completing here.”</p>
+    <h4 class="author">Mrs. Aanyu Stella</h4>
+  </div>
+  <!--added-->
+<div class="testimonial">
+    <p class="quote">“Beyond academics,the school ensures 
+        student wellbeing through clean facilities and carefully planned meals.”</p>
+    <h4 class="author">Mr.Okurut Ivan</h4>
+  </div>
+
+  
+  <!--added-->
+  <!-- Add more testimonials as needed -->
+</div>
+
+<!--what people say-->
+
+<h2 style="color: #009688;" class="my-hv"> 
+  Exciting New Campus Construction
+ </h2>
+<!--new campus construction-->
+
+<section class="ppss-campus-section">
+  <video
+    src="videos/new-campus.mp4"
+    controls
+    poster="images/latest 2.jpeg"
+    id="ppssCampusVideo"
+    class="ppss-campus-video"
+  ></video>
+  <button id="ppssFullscreenBtn" class="ppss-campus-fullscreen">Fullscreen</button>
 </section>
-<footer>
-    <p> <span class="copy">&copy;</span> Jxs Global 2025 . All rights reserved</p>
+<!--form download-->
+
+  <div class="download-box">
+    <i class='bx bxs-download bx-download-icon'></i>
+
+    <!-- Hidden image just for reference -->
+    <img src="videos/application-form.png" alt="Download Icon" class="download-icon" id="hidden-image" />
+
+    <div class="title">DOWNLOAD APPLICATION FORM</div>
+
+    <button class="download-btn" onclick="downloadForm()">DOWNLOAD FORM</button>
+  </div>
+
+<!--form download-->
+    </main>
+  <!--end of middle-->
+   <footer>
+  <div class="footer-container">
+    <div class="footer-content-center">
+      <div class="badge">
+        <img src="images/logo1-removebg.png" alt="School Logo">
+      </div>
+
+      <div class="social-links-footer">
+        <a href="https://www.facebook.com/profile.php?id=100066400460286" aria-label="Facebook">
+          <i class='bx bxl-facebook'></i>
+        </a>
+
+        <a href="https://wa.me/256754391008" target="_blank" aria-label="WhatsApp">
+          <i class='bx bxl-whatsapp'></i>
+        </a>
+
+        <a href="https://youtu.be/2wmHz4-qH4Y?si=HnfLzBJw8lEXqULo" aria-label="YouTube">
+          <i class='bx bxl-youtube'></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@pallisa.prog..sec?is_from_webapp=1&sender_device=pc" aria-label="TikTok">
+          <i class='bx bxl-tiktok'></i>
+        </a>
+      </div>
+    </div>
+  </div>
 </footer>
 
-<script>
-    const images=["photos/market-analyses1.jpeg",
-    "photos/analysis1.png",
-    "photos/analysis 3.jpeg","photos/ivan.png"]
-    let firstImage=document.getElementById('market');
-    let index=0;
-    function changeImage(){
-        index=(index+1)% images.length;
-        firstImage.src=images[index];
+    <script>
+       //toggle
+   //toggle
+const overlay = document.getElementById('menuOverlay');
+
+    function toggleMenu() {
+      overlay.classList.toggle('active');
     }
-    setInterval(changeImage,5000);
-</script>
+
+    // Close the menu when a mobile link is clicked
+    const linkss = document.querySelectorAll('.menu-container a');
+    linkss.forEach(link => {
+      link.addEventListener('click', () => {
+        overlay.classList.remove('active');
+      });
+    });
+    //end of toggle
+      
+
+      // Scroll animation for sections
+        document.addEventListener('DOMContentLoaded', function () {
+            const
+            sections = document.querySelectorAll('section'); // Initially hide all sections except the first one
+            sections.forEach((section, index) => {
+                if (index !== 0) {
+                    section.classList.remove('visible');
+                }
+            });
+
+            // Intersection Observer for scroll animations
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            // Observe all sections
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+
+            // Text animation for welcome message
+            const welcomeMessage = document.querySelector('.welcome-message p');
+            if (welcomeMessage) {
+                const text = welcomeMessage.textContent;
+                welcomeMessage.textContent = '';
+
+                for (let i = 0; i < text.length; i++) {
+                    setTimeout(() => {
+                        welcomeMessage.textContent += text[i];
+                    }, i * 20);
+                }
+            }
+
+            // Hover animation for buttons
+            const buttons = document.querySelectorAll('.button1, .button2');
+            buttons.forEach(button => {
+                button.addEventListener('mouseenter', () => {
+                    button.style.transform = 'translateY(-3px)';
+                    button.style.boxShadow = '0 5px 15px rgba(0, 0, 0, 0.2)';
+                });
+
+                button.addEventListener('mouseleave', () => {
+                    button.style.transform = 'translateY(0)';
+                    button.style.boxShadow = 'none';
+                });
+            });
+
+            // Animation for motto cards
+            const mottoCards = document.querySelectorAll('.motto1');
+            mottoCards.forEach((card, index) => {
+                setTimeout(() => {
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+
+            // Header scroll behavior
+            let lastScroll = 0;
+            const header = document.querySelector('header');
+            const headerHeight = header.offsetHeight;
+
+            window.addEventListener('scroll', function () {
+                const currentScroll = window.pageYOffset;
+
+                if (currentScroll <= 0) { // At top of page, always show header
+                    header.classList.remove('hidden'); return;
+                } if (currentScroll > lastScroll &&
+                    !header.classList.contains('hidden')) {
+                    // Scrolling down
+                    header.classList.add('hidden');
+                } else if (currentScroll < lastScroll && header.classList.contains('hidden')) { // Scrolling
+                                upheader.classList.remove('hidden');
+                } lastScroll = currentScroll;
+            });
+        }); 
+
+        let hide=document.querySelector('.hide');
+        let buttonElements=document.querySelector('.read');
+        function showMe(){
+            if (hide.style.display==="none"){
+                hide.style.display='inline-block';
+                buttonElements.style.display='none';
+            }
+            else{
+                hide.style.display='none';
+                buttonElements.display='block';
+            }
+        }
+
+
+    
+
+let myImages=["images/library6.jpeg",
+  "images/lib2.jpeg", "images/library 8.jpeg","images/lab4.jpeg",
+  "images/lib3.jpeg"
+
+];
+ let path=document.querySelector('.path');
+ let index=0;
+ function changeImage(){
+index=(index+1)%myImages.length;
+path.src=myImages[index];
+
+ }
+ setInterval(changeImage,5000);
+
+
+ //welcome page
+//content
+document.addEventListener('DOMContentLoaded', () => {
+  const text1 = document.querySelector('.text1');
+  const chanda = document.querySelector('.chanda');
+  const spans = document.querySelectorAll('.spans span');
+//PALLISA PROGRESSIVE SECONDARY SCHOOl
+//Nurturing curiosity,fostering growth, and guiding students towards their dreams.
+  let count = 0;
+  const parents = [
+  { message: 'PALLISA PROGRESSIVE SECONDARY SCHOOl', person: 'Nurturing curiosity,fostering growth, and guiding students towards their dreams.' },
+    { message: 'A SCIENCE BASED SCHOOL AROUND TOWN', person: 'Where young minds are shaped,talents are discovered and futures are built' },
+    // add more testimonial objects:
+    { message: 'A Strong Foundation for a Brighter Future', person: 'Rooted in faith,growing in grace and committed to excelence.' },
+    { message: 'A Vibrant Learning Environment that Values Excellence', person: 'Inspiring students to achieve excellence in academics,sports,and character' }
+  ];
+
+  function showTestimonial() {
+    const { message, person } = parents[count];
+    text1.textContent = message;
+    chanda.textContent = person;
+    spans.forEach((span, idx) => {
+      span.classList.toggle('active', idx === count);
+    });
+  }
+
+  spans.forEach((span, idx) => {
+    span.addEventListener('click', () => {
+      count = idx;  
+      showTestimonial();
+    });
+  });
+
+  // Optional: Auto-advance every 5 seconds
+  let autoAdvance = setInterval(() => {
+    count = (count + 1) % parents.length;
+    showTestimonial();
+  }, 10000);
+
+  // Pause auto-advance on hover
+  document.querySelector('.eduction-programs-content1').addEventListener('mouseenter', () => {
+    clearInterval(autoAdvance);
+  });
+  document.querySelector('.eduction-programs-content1').addEventListener('mouseleave', () => {
+    autoAdvance = setInterval(() => {
+      count = (count + 1) % parents.length;
+      showTestimonial();
+    }, 9000);
+  });
+
+  // Initialize first testimonial
+  showTestimonial();
+});
+ //welcome page
+
+
+ //what kids say
+ (function(){
+    const uinSlides = document.querySelectorAll('.uin-slide');
+    const uinDots = document.querySelectorAll('.uin-dot');
+    let uinCurrent = 0;
+
+    uinDots.forEach(dot => {
+      dot.addEventListener('click', () => {
+        const idx = parseInt(dot.dataset.uinIndex, 10);
+        switchSlide(idx);
+      });
+    });
+
+    function switchSlide(idx) {
+      uinSlides.forEach((slide, i) => {
+        slide.classList.toggle('uin-active', i === idx);
+        uinDots[i].classList.toggle('uin-active', i === idx);
+      });
+      uinCurrent = idx;
+    }
+
+    setInterval(() => {
+      const next = (uinCurrent + 1) % uinSlides.length;
+      switchSlide(next);
+    }, 10000);
+  })();
+
+//what kids say last
+
+//new slider
+document.addEventListener('DOMContentLoaded', () => {
+  const track = document.querySelector('.carousel-track');
+  const slides = Array.from(track.children);
+  
+  let slideWidth = track.clientWidth; // size of each slide
+  let currentIndex = 0;
+
+  function moveToSlide(index) {
+    track.style.transform = `translateX(-${index * slideWidth}px)`;
+  }
+
+  window.addEventListener('resize', () => {
+    slideWidth = track.clientWidth;
+    moveToSlide(currentIndex); // adjust position on resize
+  });
+
+  setInterval(() => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    moveToSlide(currentIndex);
+  }, 5000);
+});
+
+
+//our services
+
+ const ourservicesSlides = document.querySelectorAll('.ourservices-slide');
+    const ourservicesPrevBtn = document.getElementById('ourservices-prev');
+    const ourservicesNextBtn = document.getElementById('ourservices-next');
+
+    let ourservicesIndex = 0;
+    let ourservicesInterval;
+
+    function showOurservicesSlide(index) {
+      ourservicesSlides.forEach((slide, i) => {
+        slide.style.display = (i === index) ? 'flex' : 'none';
+      });
+    }
+
+    function nextOurservicesSlide() {
+      ourservicesIndex = (ourservicesIndex + 1) % ourservicesSlides.length;
+      showOurservicesSlide(ourservicesIndex);
+    }
+
+    function prevOurservicesSlide() {
+      ourservicesIndex = (ourservicesIndex - 1 + ourservicesSlides.length) % ourservicesSlides.length;
+      showOurservicesSlide(ourservicesIndex);
+    }
+
+    function startOurservicesAutoSlide() {
+      ourservicesInterval = setInterval(nextOurservicesSlide, 10000); // 5 seconds
+    }
+
+    function resetOurservicesAutoSlide() {
+      clearInterval(ourservicesInterval);
+      startOurservicesAutoSlide();
+    }
+
+    ourservicesNextBtn.addEventListener('click', () => {
+      nextOurservicesSlide();
+      resetOurservicesAutoSlide();
+    });
+
+    ourservicesPrevBtn.addEventListener('click', () => {
+      prevOurservicesSlide();
+      resetOurservicesAutoSlide();
+    });
+
+    // Initialize
+    showOurservicesSlide(ourservicesIndex);
+    startOurservicesAutoSlide();
+ 
+//what people say
+  const slider = document.querySelector('.testimonial-slider');
+const prevBtn = document.getElementById('prevBtn');
+const nextBtn = document.getElementById('nextBtn');
+
+prevBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: -slider.offsetWidth, behavior: 'smooth' });
+});
+
+nextBtn.addEventListener('click', () => {
+  slider.scrollBy({ left: slider.offsetWidth, behavior: 'smooth' });
+});
+
+//what people say
+
+
+//video
+ const ppssVideoElem = document.getElementById("ppssCampusVideo");
+  const ppssFullscreenBtn = document.getElementById("ppssFullscreenBtn");
+
+  // Optional: Play video on hover (desktop only)
+  ppssVideoElem.addEventListener("mouseenter", () => {
+    if (window.innerWidth > 768 && ppssVideoElem.paused) {
+      ppssVideoElem.play();
+    }
+  });
+
+  ppssVideoElem.addEventListener("mouseleave", () => {
+    if (window.innerWidth > 768 && !ppssVideoElem.paused) {
+      ppssVideoElem.pause();
+    }
+  });
+
+  // Fullscreen toggle
+  ppssFullscreenBtn.addEventListener("click", () => {
+    if (ppssVideoElem.requestFullscreen) {
+      ppssVideoElem.requestFullscreen();
+    } else if (ppssVideoElem.webkitRequestFullscreen) {
+      ppssVideoElem.webkitRequestFullscreen();
+    } else if (ppssVideoElem.msRequestFullscreen) {
+      ppssVideoElem.msRequestFullscreen();
+    }
+  });
+
+  // Smooth fade in animation when video is visible
+  const ppssObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        ppssVideoElem.style.opacity = '1';
+        ppssVideoElem.style.transform = 'translateY(0)';
+      }
+    });
+  }, { threshold: 0.5 });
+
+  ppssVideoElem.style.opacity = '0';
+  ppssVideoElem.style.transform = 'translateY(30px)';
+  ppssObserver.observe(ppssVideoElem);
+//video end
+
+//uneb form
+ function downloadForm() {
+      const imageUrl = 'videos/application-form.png'; // Update if image is in another folder or hosted online
+
+      const a = document.createElement('a');
+      a.href = imageUrl;
+      a.download = 'S1_Application_Form.jpeg';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    }
+//uneb form last
+    </script>
 </body>
+
 </html>
